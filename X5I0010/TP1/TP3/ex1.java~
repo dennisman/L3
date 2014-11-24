@@ -1,0 +1,70 @@
+/*(NULL)*/
+abstract class Etat {
+	private GoogleCar car;
+
+	public Etat() {
+		
+	}
+
+	public void Push () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class EtatAttente extends Etat {
+
+	public EtatAttente() {
+		
+	}
+
+	public void Push () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class EtatArret extends Etat {
+
+	public EtatArret() {
+		
+	}
+
+	public void Push () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class GoogleCar {
+	private EtatArret etatArret;
+	private EtatConduite etatconduite;
+	private EtatAttente etatAttente;
+	private Etat etatcourant;
+
+	public GoogleCar() {
+		
+	}
+
+	public void action () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class EtatConduite extends Etat {
+
+	public EtatConduite() {
+		
+	}
+
+	public void Push () {
+		
+	}
+
+}
+

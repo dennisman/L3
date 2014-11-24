@@ -1,0 +1,9 @@
+package Ex1Edt;
+
+public class ChoixChimie implements Facto {
+
+	public ChoixChimie() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

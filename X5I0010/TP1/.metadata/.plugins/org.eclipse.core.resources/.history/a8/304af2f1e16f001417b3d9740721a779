@@ -1,0 +1,15 @@
+package Ex3BDD;
+
+public class ProxySecureOracle implements Proxy {
+
+	public ProxySecureOracle() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void affichage() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package Ex3BDD;
+
+public class FactorySQL extends Factory {
+
+	public FactorySQL() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

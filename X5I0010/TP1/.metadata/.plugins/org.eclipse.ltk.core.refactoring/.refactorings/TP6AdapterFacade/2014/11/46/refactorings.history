@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Ex2FAcade.FacadeRetro.java&apos; to &apos;Facade.java&apos;&#x0A;- Original project: &apos;TP6AdapterFacade&apos;&#x0A;- Original element: &apos;Ex2FAcade.FacadeRetro.java&apos;&#x0A;- Renamed element: &apos;Ex2FAcade.Facade.java&apos;" description="Rename compilation unit &apos;FacadeRetro.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Ex2FAcade{FacadeRetro.java" name="Facade.java" references="false" stamp="1415792988171" version="1.0"/>
+</session>

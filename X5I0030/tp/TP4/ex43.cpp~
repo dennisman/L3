@@ -1,0 +1,35 @@
+#include<cstdio>
+#include<cstdint>
+#include<cstdlib>
+#include <iostream>
+using namespace std;
+int main(){
+
+//var
+	string question = "entier ? ";
+	int32_t entier;
+	int32_t mystere;
+	int cpt;
+
+//initialisation
+	srand(time(NULL));
+	cpt = 0;
+	mystere = rand()%100;
+	entier = -1;
+	
+	
+//pgm
+
+
+	cout<< question << endl;
+	cin>> entier;
+	
+	cout<<mystere<<endl;
+
+
+	
+	
+	
+return 0;
+}
+

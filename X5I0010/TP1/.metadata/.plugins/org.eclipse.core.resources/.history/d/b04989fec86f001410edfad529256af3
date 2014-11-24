@@ -1,0 +1,9 @@
+package Ex1Edt;
+
+public abstract class Facto {
+
+	public Facto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

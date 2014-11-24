@@ -1,0 +1,9 @@
+
+
+public class ProfInfo implements Prof {
+
+	public ProfInfo() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

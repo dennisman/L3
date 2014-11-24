@@ -1,0 +1,15 @@
+package Ex3BDD;
+
+public class ProxySecureSQL implements Proxy {
+
+	public ProxySecureSQL() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void affichage() {
+		System.out.println("je suis un proxy secure SQL");
+
+	}
+
+}

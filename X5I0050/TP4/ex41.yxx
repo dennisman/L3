@@ -1,0 +1,84 @@
+// Programme exemple1.yxx
+// bison exemple1.yxx
+// g++ -o exemple1 exemple1.tab.cxx
+// ./exemple1
+// 1 0 1 + +<Entrée>
+// --> 2
+// 01-1-<Entrée>
+// --> -2
+// 3<Entrée>
+// erreur lors de l’analyse : syntax error
+
+//****** Prologue c++ *********
+%{
+	#define YYSTYPE int
+	#include<iostream>
+	int yylex (void);
+	void yyerror (char const*);
+	int i = 0,j =0;
+%}
+
+//******Grammaire*****
+%%
+input : //
+	|input ligne
+;
+
+ligne : '\n'		{std::cout << "nb a " << i << std::endl;
+			std::cout << "nb d " << j << std::endl;
+			i=0;j=0;}
+	|rac '\n'	{std::cout << "-->" << $1 << std::endl;
+			std::cout << "nb a " << i << std::endl;
+			std::cout << "nb d " << j << std::endl;
+			i=0;j=0;}
+;
+
+/*exp:	'0'		{$$ = 0 ;}
+	| '1'		{$$ = 1 ;}
+	| exp exp '+'	{$$ = $1 + $2;}
+	| exp exp '-'	{$$ = $1 - $2;}
+;*/
+rac:	'a' rac {i++ ;} 
+	| 'b' 'c' rac
+	| 'd' {j++ ;}
+; 
+	
+//******epilogue c++ *****
+%%
+
+// Appelé par l’analyseur en cas d’erreur
+void yyerror(char const *s){
+	std::cout << "erreur lors de l’analyse : " << s << std::endl;
+}
+
+
+// Fait une analyse syntaxique caractère par caractère
+int yylex (void){
+	char c;
+	std::cin>>c;
+	while(c==' ' || c=='\t'){
+		std::cin>>c;
+	}
+	return c;
+}
+
+int main (void){
+	std::cin.unsetf(std::ios_base::skipws);
+	return yyparse();
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

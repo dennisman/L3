@@ -1,0 +1,19 @@
+package Ex2Banque;
+
+public abstract class Factory {
+	protected Lettre lettre;
+	public Factory(String s) {
+		lettre = factoryMethod(s);
+	}
+	
+	public Lettre factoryMethod(String type){
+		if(type == "visa"){
+			return new LettreVisa("assurance annulation ");
+		}else if(type == "american"){
+			return new LettreAmercianExpress("assistance juridique a l etranger ");
+		}else if(type == "mastercad"){
+			return new LettreVisa("assurance annulation ");
+		}
+	}
+
+}

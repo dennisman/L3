@@ -1,0 +1,7 @@
+package Ex3BDD;
+
+public interface Proxy {
+	
+	public void affichage();
+
+}

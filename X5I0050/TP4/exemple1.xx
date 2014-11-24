@@ -1,0 +1,15 @@
+// Programme exemple1.yxx
+// bison exemple1.yxx
+// g++ -o exemple1 exemple1.tab.cxx
+// ./exemple1
+// 1 0 1 + +<Entrée>
+// --> 2
+// 01-1-<Entrée>
+// --> -2
+// 3<Entrée>
+// erreur lors de l’analyse : syntax error
+
+//****** Prologue c++ *********
+%{
+	
+

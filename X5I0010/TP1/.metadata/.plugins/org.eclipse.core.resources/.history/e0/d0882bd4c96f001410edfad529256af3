@@ -1,0 +1,10 @@
+package Ex1Edt;
+
+public class Cours {
+	private Sale salle;
+	private Prof prof;
+	public Cours() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

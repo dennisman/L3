@@ -1,0 +1,9 @@
+package Ex3BDD;
+
+public abstract class Proxy {
+
+	public Proxy() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

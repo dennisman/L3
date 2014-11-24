@@ -1,0 +1,10 @@
+package Ex2Banque;
+
+public class LettreMastercard extends Lettre {
+
+	public LettreMastercard(String a) {
+		super(a);
+		// TODO Auto-generated constructor stub
+	}
+
+}

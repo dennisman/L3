@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include <iostream>
+using namespace std;
+int main(){
+	string dim = "dimanche";
+	string lun = "lundi";
+	string mar = "mardi";
+	string mer = "mercredi";
+	string jeu = "jeudi";
+	string ven = "vendredi";
+	string sam = "samedi";
+	
+	string jours[7];
+	jours[0] = dim;
+	jours[1] = lun;
+	jours[2] = mar;
+	jours[3] = mer;
+	jours[4] = jeu;
+	jours[5] = ven;
+	jours[6] = sam;
+	
+	string qjour = "Jour ? ";
+	string qmois = "Mois ? ";
+	string qannee = "Annee ? ";
+	string res = "resultat: ";
+	
+	int jour, mois, annee, t3,t4, t5;
+	int * t41;
+	
+	cout<< qjour<< endl;
+	cin>> jour;
+	cout<< qmois<< endl;
+	cin>> mois;
+	cout<< qannee<< endl;
+	cin>> annee;
+	
+	if(mois<3){
+		annee = annee -1;
+	}
+	t3 = annee + annee/4 - annee/100;
+	t5 = 0;
+	t4 = t1 -1 + t5;
+
+	// ???
+}
+	
+	
+	
+	
+return 0;
+}
+

@@ -1,0 +1,104 @@
+// Programme exemple1.yxx
+// bison exemple1.yxx
+// g++ -o exemple1 exemple1.tab.cxx
+// ./exemple1
+// 1 0 1 + +<Entrée>
+// --> 2
+// 01-1-<Entrée>
+// --> -2
+// 3<Entrée>
+// erreur lors de l’analyse : syntax error
+
+//****** Prologue c++ *********
+%{
+	#define YYSTYPE int
+	#include<iostream>
+	int yylex (void);
+	void yyerror (char const*);
+	int i = 0,j =0;
+%}
+
+//******Grammaire*****
+%%
+input : //
+	|input ligne
+;
+
+ligne : '\n'		
+	|rac'\n'	{std::cout << "-->" << $1 << std::endl;}
+;
+
+/*exp:	'0'		{$$ = 0 ;}
+	| '1'		{$$ = 1 ;}
+	| exp exp '+'	{$$ = $1 + $2;}
+	| exp exp '-'	{$$ = $1 - $2;}
+;*/
+rac:	 somme {$$ = $1;}
+; 
+
+somme:		somme'+'produit		{$$ = $1 + $2 ;}
+		|produit			{$$ = $1 ;}
+
+;
+
+chiffre : '0'	{$$ = 0;}
+	|'1' 	{$$ = 1;}
+	|'2' 	{$$ = 2;}
+	|'3' 	{$$ = 3;}
+	|'4' 	{$$ = 4;}
+	|'5' 	{$$ = 5;}
+	|'6' 	{$$ = 6;}
+	|'7' 	{$$ = 7;}
+	|'8' 	{$$ = 8;}
+	|'9' 	{$$ = 9;}
+;
+terme:	chiffre		{$$ = $1 ;}
+	|chiffre terme	{$$ = $1*10 +$2 ;}
+;
+produit:	produit '*' facteur		{$$ = $1 * $2;}
+		| facteur 		{$$ = $1 ;}
+;
+
+facteur : 	'(' somme ')'		{$$ = $1;}
+		| terme			{$$ = $1 ;}
+;
+
+//******epilogue c++ *****
+%%
+
+// Appelé par l’analyseur en cas d’erreur
+void yyerror(char const *s){
+	std::cout << "erreur lors de l’analyse : " << s << std::endl;
+}
+
+
+// Fait une analyse syntaxique caractère par caractère
+int yylex (void){
+	char c;
+	std::cin>>c;
+	while(c==' ' || c=='\t'){
+		std::cin>>c;
+	}
+	return c;
+}
+
+int main (void){
+	std::cin.unsetf(std::ios_base::skipws);
+	return yyparse();
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

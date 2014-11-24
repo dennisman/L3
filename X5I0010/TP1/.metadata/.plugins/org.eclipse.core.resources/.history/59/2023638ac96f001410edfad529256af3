@@ -1,0 +1,21 @@
+package Ex1Edt;
+
+public class ChoixMath implements Facto {
+
+	public ChoixMath() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Sale choixSalle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Prof choixProf() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

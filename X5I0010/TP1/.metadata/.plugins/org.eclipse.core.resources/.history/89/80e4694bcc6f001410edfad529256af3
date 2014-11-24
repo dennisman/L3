@@ -1,0 +1,9 @@
+package Ex2Banque;
+
+public class LettreVisa {
+
+	public LettreVisa() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

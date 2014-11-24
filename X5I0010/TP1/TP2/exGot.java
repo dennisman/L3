@@ -1,0 +1,105 @@
+/*(NULL)*/
+class ComportementHache implements ComportementArme {
+
+	public ComportementHache() {
+		
+	}
+
+	public void utiliserArme () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class Roi extends Personnage {
+
+	public Roi() {
+		
+	}
+
+	public void combattre () {
+		
+	}
+
+}
+
+/*(NULL)*/
+interface ComportementArme {
+
+	public ComportementArme() {
+		
+	}
+
+	public void utiliserArme () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class MarcheurBlanc extends Personnage {
+
+	public MarcheurBlanc() {
+		
+	}
+
+	public void combattre () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class ComportementArc implements ComportementArme {
+
+	public ComportementArc() {
+		
+	}
+
+	public void utiliserArme () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class Personnage {
+	private ComportementArme arme;
+
+	public Personnage() {
+		
+	}
+
+	public void combattre () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class Reine extends Personnage {
+
+	public Reine() {
+		
+	}
+
+	public void combattre () {
+		
+	}
+
+}
+
+/*(NULL)*/
+class ComportementEpee implements ComportementArme {
+
+	public ComportementEpee() {
+		
+	}
+
+	public void utiliserArme () {
+		
+	}
+
+}
+

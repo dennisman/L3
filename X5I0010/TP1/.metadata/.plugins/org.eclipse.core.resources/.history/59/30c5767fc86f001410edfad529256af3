@@ -1,0 +1,9 @@
+package Ex1Edt;
+
+public class ProfMath {
+
+	public ProfMath() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

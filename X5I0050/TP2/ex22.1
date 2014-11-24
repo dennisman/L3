@@ -1,0 +1,18 @@
+%{
+int nombres;
+int mots;
+%}
+Y  "{\b}Yacc{\b}" %% marche pas
+F ^"From"
+P ".*{+}({3,10}).*"
+%%
+{Y}	printf("%s", yytext);
+{F}	printf ("%s", yytext);
+{P}	printf ("%s", yytext);
+.|[\n]		;
+%%
+main() {
+	printf("\n");
+	yylex();
+	printf("\n");
+}

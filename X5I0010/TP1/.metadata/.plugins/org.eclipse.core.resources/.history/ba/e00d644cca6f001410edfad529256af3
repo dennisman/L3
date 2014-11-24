@@ -1,0 +1,5 @@
+package Ex1Edt;
+
+public interface Prof {
+
+}

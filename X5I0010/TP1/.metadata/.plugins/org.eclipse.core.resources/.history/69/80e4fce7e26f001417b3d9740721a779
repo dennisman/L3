@@ -1,0 +1,9 @@
+package Ex3BDD;
+
+public abstract class Factory {
+
+	public Factory() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

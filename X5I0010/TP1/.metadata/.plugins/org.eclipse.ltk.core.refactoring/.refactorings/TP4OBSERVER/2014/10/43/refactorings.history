@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Affichage.java&apos; to &apos;TP4OBSERVER/src/Ex2Station&apos;&#x0A;- Original project: &apos;TP4OBSERVER&apos;&#x0A;- Destination element: &apos;TP4OBSERVER/src/Ex2Station&apos;&#x0A;- Original element: &apos;Ex1Horloge.Affichage.java&apos;" description="Copy compilation unit" destination="/src&lt;Ex2Station" element1="/src&lt;Ex1Horloge{Affichage.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1413969547036" units="1" version="1.0"/>
+</session>

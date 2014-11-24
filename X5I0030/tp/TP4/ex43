@@ -1,0 +1,30 @@
+#include<cstdio>
+#include <iostream>
+using namespace std;
+int main(){
+	int32_t entier;
+	int * t41;
+	
+	cout<< qjour<< endl;
+	cin>> jour;
+	cout<< qmois<< endl;
+	cin>> mois;
+	cout<< qannee<< endl;
+	cin>> annee;
+	
+	if(mois<3){
+		annee = annee -1;
+	}
+	t3 = annee + annee/4 - annee/100;
+	t5 = 0;
+	t4 = t1 -1 + t5;
+
+	// ???
+}
+	
+	
+	
+	
+return 0;
+}
+

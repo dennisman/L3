@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=TP3/src&lt;Ex2BilletPlane{Etat.java[Etat" modifiers="1025" timestamp="1413354533000"/>
+<typeInfo handle="=TP3/src&lt;Ex3Monopoly{EtatTerrain.java[EtatTerrain" modifiers="1025" timestamp="1413357085000"/>
+<typeInfo handle="=TP4OBSERVER/src&lt;Ex1Horloge{Horloge.java[Horloge" modifiers="1025" timestamp="1413959690000"/>
+<typeInfo handle="=TP4OBSERVER/src&lt;Ex2Station{Station.java[Station" modifiers="1025" timestamp="1413969845000"/>
+<typeInfo handle="=TP4OBSERVER/src&lt;Ex1Horloge{Affichage.java[Affichage" modifiers="1025" timestamp="1413960225000"/>
+<typeInfo handle="=TP4OBSERVER/src&lt;Ex2Station{Affichage.java[Affichage" modifiers="1025" timestamp="1413962477000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex1int{Entier.java[Entier" modifiers="1" timestamp="1415174642000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex2BMW{BMW.java[BMW" modifiers="1025" timestamp="1415776296000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex2BMW{Option.java[Option" modifiers="1025" timestamp="1415778786000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex4Starbuck{Boisson.java[Boisson" modifiers="1" timestamp="1415779085000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex1int{Decorator.java[Decorator" modifiers="1025" timestamp="1415174800000"/>
+<typeInfo handle="=TP5Decorator/src&lt;Ex4Starbuck{Deco.java[Deco" modifiers="1025" timestamp="1415779075000"/>
+<typeInfo handle="=TP6AdapterFacade/src&lt;Ex1BD_Chimie{NewDB.java[NewDB" modifiers="1" timestamp="1415788395000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex1Edt{Prof.java[Prof" modifiers="513" timestamp="1416383929000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex1Edt{Sale.java[Sale" modifiers="513" timestamp="1416383851000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex1Edt{Facto.java[Facto" modifiers="513" timestamp="1416383415000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex2Banque{Lettre.java[Lettre" modifiers="1025" timestamp="1416392977000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex3BDD{Factory.java[Factory" modifiers="1025" timestamp="1416394379000"/>
+<typeInfo handle="=TP7FactoryMethod8AbstractFact/src&lt;Ex3BDD{Proxy.java[Proxy" modifiers="1025" timestamp="1416393846000"/>
+</typeInfoHistroy>
