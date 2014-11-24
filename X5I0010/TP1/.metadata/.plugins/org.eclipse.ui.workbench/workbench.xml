@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
-<window height="976" width="1048" x="0" y="26">
+<window height="826" width="1048" x="0" y="26">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -47,6 +47,10 @@
 <part id="12"/>
 <part id="13"/>
 <part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
 </presentation>
 </folder>
 </info>
@@ -107,9 +111,25 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/FactoryOracle.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="51" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java" title="Main.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java" title="Main.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="199" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Affichage.java" partName="Affichage.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP4OBSERVER/src/Ex1Horloge/Affichage.java" title="Affichage.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Affichage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4OBSERVER/src/Ex1Horloge/Affichage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Analogique.java" partName="Analogique.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP4OBSERVER/src/Ex1Horloge/Analogique.java" title="Analogique.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Analogique.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4OBSERVER/src/Ex1Horloge/Analogique.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Horloge.java" partName="Horloge.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP4OBSERVER/src/Ex1Horloge/Horloge.java" title="Horloge.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Horloge.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4OBSERVER/src/Ex1Horloge/Horloge.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="54"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HorlogeConcrete.java" partName="HorlogeConcrete.java" path="/comptes/E129986P/L3/X5I0010/TP1/TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java" title="HorlogeConcrete.java" tooltip="TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -147,9 +167,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="729" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -183,7 +200,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -450,70 +467,17 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/FactorySQL.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/FactoryOracle.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Proxy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Factory.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/ProxySecureSQL.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/FactorySQL.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/FactoryOracle.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/Factory.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4OBSERVER/src/Ex1Horloge/Affichage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4OBSERVER/src/Ex1Horloge/Analogique.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4OBSERVER/src/Ex1Horloge/Horloge.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java"/>
 </editors>
-<item historyLabel="Proxy.java" index="0">
-<position info="not_deleted" x="133" y="0"/>
-</item>
-<item historyLabel="ProxySecureSQL.java" index="1">
-<position/>
-</item>
-<item historyLabel="ProxySecureOracle.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProxySQL.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProxyOracle.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProxySecureOracle.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProxySecureSQL.java" index="1">
-<position info="not_deleted" x="136" y="0"/>
-</item>
-<item historyLabel="ProxySecureOracle.java" index="2">
-<position/>
-</item>
-<item historyLabel="ProxySecureSQL.java" index="1">
-<position info="not_deleted" x="136" y="0"/>
-</item>
-<item historyLabel="ProxyOracle.java" index="4">
-<position info="not_deleted" x="132" y="90"/>
-</item>
-<item historyLabel="ProxySecureOracle.java" index="2">
-<position info="not_deleted" x="235" y="0"/>
-</item>
-<item historyLabel="ProxySecureSQL.java" index="1">
-<position info="not_deleted" x="136" y="0"/>
-</item>
-<item historyLabel="ProxySQL.java" index="3">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="Factory.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Factory.java" index="5">
-<position info="not_deleted" x="161" y="0"/>
-</item>
-<item historyLabel="ProxySecureSQL.java" index="1">
-<position info="not_deleted" x="136" y="0"/>
-</item>
-<item historyLabel="ProxySecureOracle.java" index="2">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="ProxySQL.java" index="3">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="Factory.java" index="5">
-<position info="not_deleted" x="161" y="0"/>
-</item>
-<item historyLabel="FactorySQL.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Factory.java" index="5">
-<position info="not_deleted" x="161" y="0"/>
-</item>
 <item historyLabel="FactorySQL.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
@@ -598,8 +562,71 @@
 <item historyLabel="ProxyOracle.java" index="4">
 <position info="not_deleted" x="49" y="0"/>
 </item>
-<item active="true" historyLabel="Main.java" index="8">
+<item historyLabel="Main.java" index="8">
 <position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Proxy.java" index="9">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="Factory.java" index="10">
+<position info="not_deleted" x="100" y="61"/>
+</item>
+<item historyLabel="Proxy.java" index="9">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="Main.java" index="8">
+<position info="not_deleted" x="199" y="0"/>
+</item>
+<item historyLabel="ProxySecureSQL.java" index="11">
+<position info="not_deleted" x="134" y="0"/>
+</item>
+<item historyLabel="FactorySQL.java" index="12">
+<position info="not_deleted" x="232" y="0"/>
+</item>
+<item historyLabel="Factory.java" index="10">
+<position info="not_deleted" x="100" y="61"/>
+</item>
+<item historyLabel="FactoryOracle.java" index="13">
+<position info="not_deleted" x="51" y="0"/>
+</item>
+<item historyLabel="Factory.java" index="14">
+<position info="not_deleted" x="154" y="0"/>
+</item>
+<item historyLabel="Affichage.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Analogique.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Affichage.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Analogique.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Affichage.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Horloge.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Affichage.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HorlogeConcrete.java" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Horloge.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HorlogeConcrete.java" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Analogique.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Affichage.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -621,6 +648,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HorlogeConcrete.java" tooltip="TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java">
+<persistable path="/TP4OBSERVER/src/Ex1Horloge/HorlogeConcrete.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Horloge.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Horloge.java">
+<persistable path="/TP4OBSERVER/src/Ex1Horloge/Horloge.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Analogique.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Analogique.java">
+<persistable path="/TP4OBSERVER/src/Ex1Horloge/Analogique.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Affichage.java" tooltip="TP4OBSERVER/src/Ex1Horloge/Affichage.java">
+<persistable path="/TP4OBSERVER/src/Ex1Horloge/Affichage.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java">
 <persistable path="/TP7FactoryMethod8AbstractFact/src/Ex3BDD/Main.java"/>
 </file>
@@ -653,18 +692,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Factory.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex2Banque/Factory.java">
 <persistable path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/Factory.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LettreAmercianExpress.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreAmercianExpress.java">
-<persistable path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreAmercianExpress.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LettreMastercard.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreMastercard.java">
-<persistable path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreMastercard.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LettreVisa.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreVisa.java">
-<persistable path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/LettreVisa.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lettre.java" tooltip="TP7FactoryMethod8AbstractFact/src/Ex2Banque/Lettre.java">
-<persistable path="/TP7FactoryMethod8AbstractFact/src/Ex2Banque/Lettre.java"/>
 </file>
 </mruList>
 </workbench>
