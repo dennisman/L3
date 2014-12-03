@@ -1,0 +1,7 @@
+package Ex1Billets;
+
+public interface  Billeterie {
+
+	Billet factoryMethod(int num);
+
+}

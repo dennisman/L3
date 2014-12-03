@@ -1,0 +1,9 @@
+package Ex1Billets;
+
+public class BilletPapier extends Billet {
+
+	public BilletPapier(int num) {
+		super(num);
+	}
+
+}

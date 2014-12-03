@@ -1,0 +1,9 @@
+package Ex1Billets;
+
+public class Billet {
+
+	public Billet() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

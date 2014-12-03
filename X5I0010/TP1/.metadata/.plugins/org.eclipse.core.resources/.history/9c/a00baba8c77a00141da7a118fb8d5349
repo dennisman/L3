@@ -1,0 +1,9 @@
+package Ex1Billets_1;
+
+public class Centrale {
+
+	public Centrale() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

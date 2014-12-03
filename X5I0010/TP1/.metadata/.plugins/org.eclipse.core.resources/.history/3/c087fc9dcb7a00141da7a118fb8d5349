@@ -1,0 +1,9 @@
+package Ex1Billets_1.copy;
+
+public class BIlletElec extends Billet {
+
+	public BIlletElec(int num) {
+		super(num);
+	}
+
+}

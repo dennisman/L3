@@ -1,0 +1,43 @@
+fonction:
+	sub $sp, $sp, 24
+	sw $ra, 16($sp)
+	sw $a0, 24($sp) # Sauvegarde de $a0 dans le bloc P du cadre de 
+	
+	lw $a0, 24($sp)
+	lw $ra, 16($sp)
+	add $sp, $sp, 24
+	jr $ra
+	
+
+
+	main:
+	sub $sp, $sp, 24 # 24 = 16+ 8
+	sw $ra, 16($sp) # Sauvegarde de $ra au début du bloc R
+	
+	li $a0, 5
+	
+	
+	
+	
+	jal fonction
+	
+	
+	
+	/*
+	# On récupère le résultat dans $v0
+	# Affichage de $v0
+	move $a0, $v0
+	li $v0, 36 # print_uint (affichage d'un entier non signé)
+	syscall
+	# Passage à la ligne (affichage d'un '\n')
+	li $a0, '\n'
+	li $v0, 11 # print_char
+	syscall
+	
+	/*
+	
+	lw $ra, 16($sp)
+	add $sp, $sp, 24
+	jr $ra
+	
+

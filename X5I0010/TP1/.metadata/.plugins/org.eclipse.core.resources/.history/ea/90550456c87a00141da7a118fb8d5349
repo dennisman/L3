@@ -1,0 +1,29 @@
+package Ex1Billets_1;
+
+import java.util.Vector;
+
+public class Centrale {
+	static private Centrale instance;
+	private Vector<Billet> billets;
+	private Billeterie fabrique;
+	private int numeroBillet;
+	
+	private Centrale(Billeterie f) {
+		numeroBillet = 0;
+		fabrique = f;
+		billets = new Vector<Billet>();
+		
+	}
+	
+	public static synchronized Centrale getInstance(Billeterie f){
+		if(instance == null){
+			instance = new Centrale(f);
+		}
+		return instance;
+	}
+	
+	public void addBillet(){
+		
+	}
+
+}

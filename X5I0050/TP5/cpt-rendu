@@ -1,0 +1,42 @@
+ex 5.1
+
+a^n . b^p avec n>=0 p pair
+
+ex 5.2
+
+rouge, n'appartient pas par ce chemin,
+bleu, en cours,
+vert -> good, appartient au langage
+
+(aa) ((aa)*|aa(aaa)*) ((bb)*|(bbb)*)
+
+
+
+ex53
+
+a+ b+ (a+(bb+)?)*
+
+
+ex54
+X = (ba*b(a|b))   // x = boucle q2->q0->q1->q2
+Y = ba*b(a|b)X*a+   // Y = boucle q3->q0->q1->q2->X*->q3
+
+(a|b) X* a+ Y*
+
+
+
+ex55
+
+B	lambda	
+S	aS
+A	bA
+A	bB
+S	aA
+C	bA
+B	aC
+C	lambda
+C	B
+
+type 0
+
+		

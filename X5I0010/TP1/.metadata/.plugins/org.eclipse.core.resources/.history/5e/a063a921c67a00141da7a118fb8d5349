@@ -1,0 +1,15 @@
+package Ex1Billets;
+
+public class BilleterieElec implements Billeterie {
+
+	public BilleterieElec() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Billet factoryMethod(int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,110 @@
+	.data
+	
+	# preparation de l'affichage des resultats
+quarante5:	.asciiz "45->"
+treize:		.asciiz "\n13->"  #on rajoute \n pour faire un retour chariot
+	
+	
+	.text
+	.globl __start
+	
+# Point d'entrée du programme
+# appelle main et arrête le programme
+__start:
+	jal main
+	
+	li $v0, 10
+	syscall
+	
+	
+	
+main:
+	sub $sp, $sp, 24 # 24 = 16+ 8 car appel de fonction et registre ra
+	sw $ra, 16($sp) # Sauvegarde de $ra au début du bloc R
+	
+	la $a0, quarante5 
+	li $v0, 4 # print_string 
+	syscall
+	
+	li $a0, 45
+	jal isqrt
+	
+	move $a0, $v0
+	li $v0, 36  # print_uint (affichage d'un entier non signé)
+	syscall
+	
+	la $a0, treize
+	li $v0, 4 
+	syscall
+	
+	li $a0, 13
+	jal isqrt
+	
+	move $a0, $v0
+	li $v0, 36  # print_uint (affichage d'un entier non signé)
+	syscall
+	
+	
+	lw $ra, 16($sp)  #chargement de ra pour retourner le resultat de la fonction
+	add $sp, $sp, 24  # redecalage du bloc RetP
+	jr $ra
+
+
+isqrt_aux:
+
+	sub $sp, $sp, 24 # 24 = 16+ 8  fonction recursive
+	sw $ra, 16($sp) # Sauvegarde de $ra au début du bloc R
+	sw $s0, 20($sp) # sauvegarde du registre temporaire pour avoir une variable locale
+	
+	#calcul de xk1, variable locale
+	divu $s0, $a0, $a1
+	addu $s0, $s0, $a1
+	sra $s0, $s0, 1   #division par 2 en decalant vers la droite de 1 bit
+	
+	if1: bltu $s0, $a1, else1  # if(xk1>=xk)
+	
+	then1:
+		move $v0, $a1
+		b endif1
+	else1:
+		move $a1, $s0  #on met xk1 dans le 2e parametre de isqrt_aux et le premier parametre reste inchangé
+		jal isqrt_aux
+	
+	endif1:
+	
+	
+	lw $s0, 20($sp)
+	lw $ra, 16($sp)  #chargement de ra pour retourner le resultat de la fonction
+	add $sp, $sp, 24  # redecalage du bloc RetP
+	jr $ra
+	
+	
+isqrt:
+
+	sub $sp, $sp, 24 # 24 = 16+ 8  fonction recursive
+	sw $ra, 16($sp) # Sauvegarde de $ra au début du bloc R
+	
+	
+	
+	if2: bnez $a0, else2  #if (n==0)
+	
+	then2:
+		move $v0, $zero   # resultat <- 0
+		b endif2
+	else2:
+		move $a1, $a0    #resultat <- appel de isqrt aux sur (n,n)
+		jal isqrt_aux
+	
+	endif2:
+	
+	
+	lw $ra, 16($sp)
+	add $sp, $sp, 24
+	jr $ra
+	
+	
+	
+	
+	
+	
+	

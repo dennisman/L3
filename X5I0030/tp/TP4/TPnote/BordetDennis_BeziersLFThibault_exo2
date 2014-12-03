@@ -1,0 +1,62 @@
+	.data
+	
+t:	.byte 6, -7, -1
+t2:
+
+	# preparation de l'affichage des resultats
+vide:	.asciiz " "
+
+	.text
+	.globl __start
+	
+# Point d'entrée du programme
+# appelle main et arrête le programme
+__start:
+	jal main
+	
+	li $v0, 10
+	syscall
+	
+main:
+	sub $sp, $sp, 40 #On fait de la place dans la pile 
+	sw $ra, 16($sp) # on stocke l'adresse de retour
+	sw $s0, 20($sp) # On stocke notre indice de boucle
+	sw $s1, 24($sp) #
+	
+	la $s0, t #On prend l'adresse de la première case du tableau
+	la $s1, t2 #après le tableau en mémoire
+
+for:	bge $s0, $s1, endfor	#Boucle for tant qu'on est pas a la fin du tableau
+
+do:	lw $a0, ($s0)	#on stocke dans $a0 la case du tableau ou on se trouve
+	jal op #on appelle la fonction
+	
+	move $a0, $v0 #on met le résultat de la fonction dans a0 pour l'afficher
+	
+	li $v0, 1
+	syscall
+	
+	li $v0, 4
+	la $a0, vide
+	syscall
+	
+	addu $s0, $s0, 4 # on incrémente et on passe au byte suivant dans le tableau	
+endfor:
+	
+
+	lw $s1, 24($sp) #	
+	lw $s0, 20($sp) # On stocke notre indice de boucle
+	lw $ra, 16($sp) # on stocke l'adresse de retour
+	add $sp, $sp, 40 #On fait de la place dans la pil
+
+
+
+op:
+	add $a0, $a0, 12
+	move $v0, $a0
+	
+	jr $ra
+	
+	
+	
+	

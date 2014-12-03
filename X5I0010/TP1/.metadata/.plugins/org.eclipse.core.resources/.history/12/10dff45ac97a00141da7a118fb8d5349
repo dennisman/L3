@@ -1,0 +1,12 @@
+package Ex1Billets_1;
+
+public class Main {
+
+	public Main() {
+		Centrale c;
+		Billeterie be = new BilleterieElec();
+		Billeterie bp = new BilleteriePapier();
+
+	}
+
+}

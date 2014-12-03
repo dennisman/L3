@@ -1,0 +1,17 @@
+package Ex1Billets;
+
+public abstract class Billeterie {
+
+	public Billeterie() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	Billet factoryMethod(boolean elec){
+		if(elec){
+			
+		}else{
+			
+		}
+	}
+
+}

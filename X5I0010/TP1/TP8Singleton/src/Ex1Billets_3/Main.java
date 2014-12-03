@@ -1,0 +1,30 @@
+package Ex1Billets_3;
+
+import java.util.Vector;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		Billeterie be = new BilleterieElec();
+		Billeterie bp = new BilleteriePapier();
+		
+		Centrale.getInstance(bp).addBillet();
+		Centrale.getInstance(be).addBillet();
+		Centrale.getInstance(be).addBillet();
+		Centrale.getInstance(bp).addBillet();
+		Centrale.getInstance(bp).addBillet();
+		Centrale.getInstance(be).addBillet();
+		Centrale.getInstance(bp).addBillet();
+		Centrale.getInstance(be).addBillet();
+		
+		
+		Vector<Billet> b = Centrale.getInstance(bp).getBillets();
+		
+		for(Billet bb : b){
+			bb.aff();
+		}
+		
+
+	}
+}
