@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Locale"/>
-<fullyQualifiedTypeName name="ex2_date.DatePerso"/>
-<fullyQualifiedTypeName name="ex2_date.StrategyAffichage"/>
-<fullyQualifiedTypeName name="ex2_date.AffichageUk"/>
-<fullyQualifiedTypeName name="ex4_got.ComportementArc"/>
-<fullyQualifiedTypeName name="ex4_got.ComportementEpee"/>
-<fullyQualifiedTypeName name="ex4_got.MarcheurBlanc"/>
-<fullyQualifiedTypeName name="ex4_got.Reine"/>
-<fullyQualifiedTypeName name="ex4_got.ComportementArme"/>
-<fullyQualifiedTypeName name="ex4_got.ComportementHache"/>
-<fullyQualifiedTypeName name="Ex1.EtatArrete"/>
 <fullyQualifiedTypeName name="Ex1.EtatAttente"/>
 <fullyQualifiedTypeName name="Ex1.EtatConduite"/>
 <fullyQualifiedTypeName name="Ex1.GoogleCar"/>
@@ -38,7 +27,6 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="Ex4Starbuck.Boisson"/>
 <fullyQualifiedTypeName name="Ex4Starbuck.Petit"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="Ex1BD_Chimie.Molecule"/>
 <fullyQualifiedTypeName name="Ex1BD_Chimie.OldDB"/>
 <fullyQualifiedTypeName name="Ex1BD_Chimie.NewDB"/>
@@ -60,4 +48,16 @@
 <fullyQualifiedTypeName name="Ex3BDD.Factory"/>
 <fullyQualifiedTypeName name="Ex3BDD.FactoryOracle"/>
 <fullyQualifiedTypeName name="Ex3BDD.Proxy"/>
+<fullyQualifiedTypeName name="InterGraph.BoutonWindows"/>
+<fullyQualifiedTypeName name="InterGraph.BoutonLinux"/>
+<fullyQualifiedTypeName name="InterGraph.MenuLin"/>
+<fullyQualifiedTypeName name="InterGraph.CreerCompo"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="Ex1Billets.BilletPapier"/>
+<fullyQualifiedTypeName name="Ex1Billets.BilleterieElec"/>
+<fullyQualifiedTypeName name="Ex1Billets.BIlletElec"/>
+<fullyQualifiedTypeName name="Ex1Billets_1.Billet"/>
+<fullyQualifiedTypeName name="Ex1Billets_1.BilleterieElec"/>
+<fullyQualifiedTypeName name="Ex1Billets_1.BilleteriePapier"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

@@ -1,9 +1,0 @@
-package Ex1Edt;
-
-public class SalleMath {
-
-	public SalleMath() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

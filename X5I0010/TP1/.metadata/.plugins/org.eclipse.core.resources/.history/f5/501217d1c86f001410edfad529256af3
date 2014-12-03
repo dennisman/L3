@@ -1,9 +1,0 @@
-package Ex1Edt;
-
-public class SalleInfo {
-
-	public SalleInfo() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
