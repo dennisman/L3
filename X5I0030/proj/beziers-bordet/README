@@ -1,0 +1,5 @@
+Pour regarder le processeur Nono-1, ouvrir le fichier NONO avec Logisim, puis ajouter la librairie "MassiveOctoComputingMachine" 
+à l'ouverture du fichier
+
+Pour regarder Nono-2, ouvrir Nono-1 et regarder les branches désirées. Notez que le processeur Nono-2 n'est pas fonctionnel, seulement une preuve de nos travaux.
+

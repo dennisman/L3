@@ -1,0 +1,85 @@
+TP 1 Inférence de type
+
+
+ex 1
+
+5 * 4 * 3 * 2 * 1 ;;
+- : int = 120
+
+true ;;
+- : bool = true
+
+if 2 > 0 then "true"
+else "false" ;;
+- : string = "true"
+
+if 2 > 0 then true
+else false ;;
+- : bool = true
+
+if 2 > 0 then "oui"
+else "non" ;;
+- : string = "oui"
+
+if 2 > 0 then oui
+else non ;;
+Error: Unbound value oui
+
+if 2 > 0 then true
+else "false" ;;
+- : bool = true
+
+3.14 +. 2. ;;
+- : float = 5.14
+
+3.14 +. 2 ;;
+
+3.14 + 2.0 ;;
+
+3.14 > 2. ;;
+
+3.14 > 2 ;;
+
+int_of_float (3.14) > 2 ;;
+
+3.14 > float_of_int (2) ;;
+
+3 > 2 ;;
+
+"trois" > "deux" ;;
+
+"deux" > "un" ;;
+
+5 / 2 ;;
+
+5. /. 2. ;;
+
+sqrt (4.) ;;
+
+sqrt (4) ;;
+
+sqrt ;;
+
+exp (1.) ;;
+
+log (exp (1.)) ;;
+5 / 0 ;;
+if true then 5 / 0
+else 3 ;;
+if true then 3
+else 5 / 0 ;;
+if false then 5 / 0
+else 3 ;;
+if false then 3
+else 5 / 0 ;;
+(2 / 0 = 5) && true ;;
+true && (2 / 0 = 5) ;;
+(2 / 0 = 5) && false ;;
+false && (2 / 0 = 5) ;;
+(2 / 0 = 5) || true ;;
+true || (2 / 0 = 5) ;;
+(2 / 0 = 5) || false ;;
+false || (2 / 0 = 5) ;;
+"s" ^ "i" ;;
+‘s‘ ^ "i" ;;
+

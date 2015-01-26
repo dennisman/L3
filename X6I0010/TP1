@@ -1,0 +1,252 @@
+TP 1 Inférence de type
+
+
+ex 1
+
+5 * 4 * 3 * 2 * 1 ;;
+- : int = 120
+
+true ;;
+- : bool = true
+
+if 2 > 0 then "true"
+else "false" ;;
+- : string = "true"
+
+if 2 > 0 then true
+else false ;;
+- : bool = true
+
+if 2 > 0 then "oui"
+else "non" ;;
+- : string = "oui"
+
+if 2 > 0 then oui
+else non ;;
+Error: Unbound value oui
+
+if 2 > 0 then true
+else "false" ;;
+- : bool = true
+
+3.14 +. 2. ;;
+- : float = 5.14
+
+3.14 +. 2 ;;
+Error: This expression has type int but an expression was expected of type
+       float
+
+3.14 + 2.0 ;;
+Error: This expression has type float but an expression was expected of type int
+
+
+3.14 > 2. ;;
+- : bool = true
+
+3.14 > 2 ;;
+Error: This expression has type int but an expression was expected of type float
+
+int_of_float (3.14) > 2 ;;
+- : bool = true
+
+3.14 > float_of_int (2) ;;
+- : bool = true
+
+3 > 2 ;;
+- : bool = true
+
+"trois" > "deux" ;;
+- : bool = true
+
+"deux" > "un" ;;
+- : bool = false
+
+5 / 2 ;;
+- : int = 2
+
+5. /. 2. ;;
+- : float = 2.5
+
+sqrt (4.) ;;
+- : float = 2.
+
+sqrt (4) ;;
+- : int = 2 AHHH NON
+++++++++++++++++Error: This expression has type int but an expression +++++++++++++++++++was expected of type float
+
+
+sqrt ;;
+- : float -> float = <fun> 
+
+exp (1.) ;;
+- : float = 2.7
+
+log (exp (1.)) ;;
+ - : float = 1.
+
+5 / 0 ;;
+Exception: Division_by_zero.
+
+if true then 5 / 0
+else 3 ;;
+Exception: Division_by_zero.
+
+if true then 3
+else 5 / 0 ;;
+ - : int = 3
+
+
+if false then 5 / 0
+else 3 ;;
+ - : int = 3
+
+if false then 3
+else 5 / 0 ;;
+Exception: Division_by_zero.
+
+(2 / 0 = 5) && true ;;
+Exception: Division_by_zero.
+
+true && (2 / 0 = 5) ;;
+Exception: Division_by_zero.
+
+(2 / 0 = 5) && false ;;
+Exception: Division_by_zero.
+
+false && (2 / 0 = 5) ;;
++++++++++++++++- bool = true
+
+(2 / 0 = 5) || true ;;
+Exception: Division_by_zero.
+
+true || (2 / 0 = 5) ;;
++++++++++++++++++++-: boll = true
+
+(2 / 0 = 5) || false ;;
+Exception: Division_by_zero.
+
+false || (2 / 0 = 5) ;;
+Exception: Division_by_zero.
+
+"s" ^ "i" ;;
+- : string = "si"
+
+'s' ^ "i" ;;
++++++++++++++++Error: This expression has type char but an expression was expected of ++++++++++++++++type string
+
+'s' ^ 'i' ;;
+Error: This expression has type char but an expression was expected of typestring
+
+"s" ^ i ;;
+Error: Unbound value i
+
+si ;;
+Error: Unbound value si
+
+"if" ;;
+   - : string = "if"
+
+function x -> x > 0 ;;
+ - : int -> bool = <fun>
+
+(function x -> x > 0) (12) ;;
+   - : bool = true
+
+function x -> 2 * x ;;
+ - : int -> int = <fun>
+
+(function x -> 2 * x) (7) ;;
+ - : int -> int = <fun>
+
+function (x, y) -> (x + y, x - y) ;;
+++++++++++++++++++- : int * int -> int * int = <fun>
+
+function x -> x / 0 ;;
+- : int -> int = <fun>
+
+(function x -> x / 0) (12) ;;
+Exception: Division_by_zero.
+
+(function x -> x) (5) ;;
+- : int = 5
+
+(function x -> x) ("oui") ;;
+- : string = "oui"
+
+function x -> x ;;
+- : 'a -> 'a = <fun>
+
+(function x -> 1) (5) ;;
+- : int = 1
+
+(function x -> 1) (5.) ;;
+- : int = 1
+
+function x -> 1 ;;
+- : 'a -> int = <fun>
+
+(function (x, y) -> (y, x)) (1, 2) ;;
+ - : int * int = (2, 1)
+
+(function (x, y) -> (y, x)) (1, "oui") ;;
+- : string * int = ("oui", 1)
+
+(function (x, y) -> (y, x)) ("oui", "oui") ;;
+ - : string * string = ("oui", "oui")
+
+function (x, y) -> (y, x) ;;
+- : 'a * 'b -> 'b * 'a = <fun>
+
+function x -> (x, x) ;;
+- : 'a -> 'a * 'a = <fun>
+
+(function x -> (x, x)) (1) ;;
+
+let aaa = 2 and bbb = 3 * aaa in aaa + bbb ;;
+Error: Unbound value aaa
+
+let aaa = 2 in let bbb = 3 * aaa in aaa + bbb ;;
+- : int = 8
+
+let aaa = 2 in let bbb = 3 * aAa in aaa + bbb ;;
+Error: Unbound value aAa
++++++++Did you mean aaa?
+
+
+ex 2
+
+let absolu = function x -> if x >= 0 then x else - x ;;
+val absolu int -> int = <fun>
+
+absolu (absolu (-12)) ;;
+- : int = 12
+
+let comp = function (x, y, z) -> (x <= y, y <= z) ;;
+val comp 'a*'a*'a -> bool * bool = <fun>
+(comp (3, 2, 4), comp (2, 3, 4)) ;;
+
+comp ("jaune", "rouge", "vert") ;;
+let approx = function (a, b) -> let (b1, b2) = comp (a - 1, b, a + 1) in b1 && b2 ;;
+approx (12, 13) ;;
+approx ("mauve", "violet") ;;
+let ff = function x -> x + 1 in ff ;;
+ff (5) ;;
+let ff = function x -> x + 1 ;;
+ff (5) ;;
+let ff = function x -> x + 1. ;;
+ff (5) ;;
+let ff = function x -> x +. 1. ;;
+ff (5) ;;
+(let ff = function x -> x + 1 in ff) (5) ;;
+ff (5) ;;
+ff ;;
+let fff = function b -> b ;;
+fff (3) ;;
+fff ("oui") ;;
+let ffff c = c ;;
+ffff (3) ;;
+ffff ("oui") ;;
+
+
+
+

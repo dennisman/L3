@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.equinox.p2.user.ui.source" version="2.2.0.dist-62DG8ltBZLdOsDwFEi8m9FbLOK8" label="%featureName"   provider-name="%providerName" image="eclipse_update_120.jpg"    >
+	<description >
+		%description
+	</description>
+	<copyright >
+		%copyright
+	</copyright>
+	<license url="%licenseURL">
+      %license
+  	</license>
+	<includes id="org.eclipse.equinox.p2.core.feature.source" version="1.1.0.dist-829EFnfFKlR6A96"/>
+	<includes id="org.eclipse.equinox.p2.extras.feature.source" version="1.1.0.dist-7A6FEcBpDPVGogGLmS7BA7"/>
+	<includes id="org.eclipse.equinox.p2.rcp.feature.source" version="1.1.0.dist-785EoAUkciGogGLmS7BA7"/>
+	<plugin id="org.eclipse.equinox.p2.updatesite.source" version="1.0.400.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.p2.ui.importexport.source" version="1.0.1.dist"     unpack="false"/>
+</feature>

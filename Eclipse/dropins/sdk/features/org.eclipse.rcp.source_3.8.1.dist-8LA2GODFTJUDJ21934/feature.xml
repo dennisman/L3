@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.rcp.source" version="3.8.1.dist-8LA2GODFTJUDJ21934" label="%featureName"   provider-name="%providerName" image="eclipse_update_120.jpg"    >
+	<description >
+		%description
+	</description>
+	<copyright >
+		%copyright
+	</copyright>
+	<license url="%licenseURL">
+      %license
+  	</license>
+	<plugin id="org.eclipse.core.commands.source" version="3.6.1.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.databinding.source" version="1.4.1.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.databinding.observable.source" version="1.4.1.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.databinding.property.source" version="1.4.100.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.databinding.beans.source" version="1.2.200.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.jobs.source" version="3.5.200.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.expressions.source" version="3.4.400.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.runtime.source" version="3.8.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.runtime.compatibility.auth.source" version="3.2.300.dist"     unpack="false"/>
+	<plugin id="org.eclipse.osgi.source" version="3.8.1.dist"     unpack="false"/>
+	<plugin id="org.eclipse.osgi.services.source" version="3.3.100.dist"     unpack="false"/>
+	<plugin id="org.eclipse.help.source" version="3.6.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.jface.source" version="3.8.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.jface.databinding.source" version="1.6.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.ui.source" version="3.8.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.ui.workbench.source" version="3.8.1.dist"     unpack="false"/>
+	<plugin id="org.eclipse.update.configurator.source" version="3.3.200.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.simpleconfigurator.source" version="1.0.301.dist"     unpack="false"/>
+	<plugin id="org.eclipse.rcp.source" version="3.8.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.core.contenttype.source" version="3.4.200.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.app.source" version="1.3.100.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.common.source" version="3.6.100.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.ds.source" version="1.4.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.log.source" version="1.2.300.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.util.source" version="1.0.400.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.preferences.source" version="3.5.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.registry.source" version="3.5.200.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.launcher.source" version="1.3.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.console.source" version="1.0.0.dist"     unpack="false"/>
+	<plugin id="org.eclipse.equinox.bidi.source" version="0.9.0.dist"     unpack="false"/>
+</feature>

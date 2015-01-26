@@ -1,0 +1,64 @@
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+4 rows created.
+
+
+4 rows created.
+
+
+6 rows created.
+
+
+5 rows created.
+
+1- Les livres qui ont ??t?? achet??s a plus de 1 exemplaires (au lieu de 10 000,
+no offense                                                                      
+
+PL/SQL procedure successfully completed.
+
+
+TITRE                AUTEUR               GENRE                                 
+-------------------- -------------------- ---------------                       
+Mein Kampf           Adolf                Etranger                              
+
+2- Les livres avec une moyenne sup??rieure ?? 16                                
+
+PL/SQL procedure successfully completed.
+
+
+TITRE                                                                           
+--------------------                                                            
+Sentez moi                                                                      
+
+3- Les clients qui ont pas mis de commentaire a un livre                        
+
+PL/SQL procedure successfully completed.
+
+
+PREN            NOM                  TITRE                      NOTE            
+--------------- -------------------- -------------------- ----------            
+Thibault        Blf                  La Bible                     12            
+

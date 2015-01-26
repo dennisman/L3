@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.sdk"
+      label="%featureName"
+      version="3.8.1.dist-7Q85DOBoMDDlUAIWaDFz-Q01HRDnJmlM-5LmBHbPXfOgk"
+      provider-name="%providerName"
+      image="eclipse_update_120.jpg"
+      
+      >
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.platform"
+         version="3.8.1.dist-A8F8_IVRG4VZSCmeloKVfCrtIFotGyJZcMPL9"/>
+
+   <includes
+         id="org.eclipse.platform.source"
+         version="3.8.1.dist-A8F8_IVRG4VZSCmeloKVfCrtIFotGyJZcMPL9"/>
+
+   <includes
+         id="org.eclipse.cvs"
+         version="1.3.200.dist-7B79FJJ9exZ_"/>
+
+   <includes
+         id="org.eclipse.cvs.source"
+         version="1.3.200.dist-7B79FJJ9exZ_"/>
+
+   <includes
+         id="org.eclipse.jdt"
+         version="3.8.1.dist-8-8nFqrFFgQGJ"/>
+
+   <includes
+         id="org.eclipse.jdt.source"
+         version="3.8.1.dist-8-8nFqrFFgQGJ"/>
+
+   <includes
+         id="org.eclipse.pde"
+         version="3.8.1.dist-7c7vFiyFALX8A"/>
+
+   <includes
+         id="org.eclipse.pde.source"
+         version="3.8.1.dist-7c7vFiyFALX8A"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="1.4.1.dist-8v7nFQYFCmSPZXHoT2597H"/>
+
+   <includes
+         id="org.eclipse.help.source"
+         version="1.4.1.dist-8v7nFQYFCmSPZXHoT2597H"/>
+
+   <plugin
+         id="org.eclipse.sdk"
+         download-size="0"
+         install-size="0"
+         version="3.8.1.dist"/>
+
+</feature>
