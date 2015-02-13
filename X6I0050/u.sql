@@ -86,9 +86,9 @@ begin
 	dbms_output.put_line(my_var);
 end;
 /
-	SELECT titre FROM Livres NATURAL JOIN Avis 
+	SELECT refl,titre,avg(note) FROM Livres NATURAL JOIN Avis 
 	GROUP BY refl, titre
-    HAVING avg(note)>=16;
+    	HAVING avg(note)>=16;
 
 declare 
 my_var varchar2(150);

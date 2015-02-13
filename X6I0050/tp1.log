@@ -1,3 +1,4 @@
+SP2-0734: unknown command beginning "linesize 5..." - rest of line ignored.
 
 Table dropped.
 
@@ -82,117 +83,51 @@ Table created.
 
 1 row created.
 
-***************CLIENTS**************                                            
 
-PL/SQL procedure successfully completed.
-
-
-      IDCL NOM                  PREN            ADR                             
----------- -------------------- --------------- ------------------------------  
-TEL                                                                             
-------------                                                                    
-         1 A                    A               A                               
-61                                                                              
-                                                                                
-         2 A                    B               A                               
-62                                                                              
-                                                                                
-         3 B                    B               B                               
-63                                                                              
-                                                                                
-
-      IDCL NOM                  PREN            ADR                             
----------- -------------------- --------------- ------------------------------  
-TEL                                                                             
-------------                                                                    
-         4 B                    C               C                               
-64                                                                              
-                                                                                
-
-***************LIVRES**************                                             
-
-PL/SQL procedure successfully completed.
+Table altered.
 
 
-REFL       TITRE                AUTEUR               GENRE                      
----------- -------------------- -------------------- ---------------            
-001        x                    A                    u                          
-002        y                    B                    v                          
-003        z                    B                    w                          
-
-***************ACHATS**************                                             
-
-PL/SQL procedure successfully completed.
+Procedure created.
 
 
-      IDCL REFL       DATEACHAT                                                 
----------- ---------- ---------                                                 
-         1 001        10-MAY-13                                                 
-         2 001        11-MAY-13                                                 
-         3 001        13-MAY-13                                                 
-         4 001        13-JUN-12                                                 
-         1 002        14-MAY-13                                                 
-         2 002        15-MAY-13                                                 
-         3 003        10-JUN-12                                                 
+Trigger created.
 
-7 rows selected.
-
-***************AVIS**************                                               
-
-PL/SQL procedure successfully completed.
-
-
-      IDCL REFL             NOTE                                                
----------- ---------- ----------                                                
-COMMENTAIRE                                                                     
---------------------------------------------------                              
-         1 001                20                                                
-trop bon XD                                                                     
-                                                                                
-         2 001                10                                                
-mouais                                                                          
-                                                                                
-         3 001                 0                                                
-nul                                                                             
-                                                                                
-
-      IDCL REFL             NOTE                                                
----------- ---------- ----------                                                
-COMMENTAIRE                                                                     
---------------------------------------------------                              
-         1 002                18                                                
-pas mal                                                                         
-                                                                                
-         2 002                16                                                
-bien                                                                            
-                                                                                
-         3 003                18                                                
-                                                                                
-                                                                                
-
-6 rows selected.
-
-***************Q1**************                                                 
-
-PL/SQL procedure successfully completed.
-
-***************Q2**************                                                 
-
-PL/SQL procedure successfully completed.
-
-
-REFL       TITRE                 AVG(NOTE)                                      
----------- -------------------- ----------                                      
-003        z                            18                                      
-002        y                            17                                      
-
-***************Q3**************                                                 
-
-PL/SQL procedure successfully completed.
-
-	SELECT idcl, pren, nom, titre, note FROM Clients NATURAL JOIN Avis NATURAL JOIN Livres
-	       *
+SQL> insert into Avis values (001, '002', 15, 'a chier');
+insert into Avis values (001, '002', 15, 'a chier')
+            *
 ERROR at line 1:
-ORA-00979: not a GROUP BY expression 
+ORA-00900: invalid SQL statement 
+ORA-06512: at "L3_1.LIVRE_AFT_INS_ROW_UPD", line 3 
+ORA-04088: error during execution of trigger 'L3_1.LIVRE_AFT_INS_ROW_UPD' 
 
 
+SQL> execute update note;
+BEGIN update note; END;
+
+                 *
+ERROR at line 1:
+ORA-06550: line 1, column 18: 
+PL/SQL: ORA-00971: missing SET keyword 
+ORA-06550: line 1, column 7: 
+PL/SQL: SQL Statement ignored 
+
+
+SQL> execute update_note;
+BEGIN update_note; END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7: 
+PLS-00201: identifier 'UPDATE_NOTE' must be declared 
+ORA-06550: line 1, column 7: 
+PL/SQL: Statement ignored 
+
+
+SQL> execute note_update;
+mise a jour des notes                                                           
+mise a jour des notes                                                           
+mise a jour des notes                                                           
+
+PL/SQL procedure successfully completed.
+
+SQL> 
