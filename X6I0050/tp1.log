@@ -11,6 +11,15 @@ Table dropped.
 
 Table dropped.
 
+DROP TABLE Inscription CASCADE CONSTRAINTS
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table created.
+
 
 Table created.
 
@@ -85,49 +94,5 @@ Table created.
 
 
 Table altered.
-
-
-Procedure created.
-
-
-Trigger created.
-
-SQL> insert into Avis values (001, '002', 15, 'a chier');
-insert into Avis values (001, '002', 15, 'a chier')
-            *
-ERROR at line 1:
-ORA-00900: invalid SQL statement 
-ORA-06512: at "L3_1.LIVRE_AFT_INS_ROW_UPD", line 3 
-ORA-04088: error during execution of trigger 'L3_1.LIVRE_AFT_INS_ROW_UPD' 
-
-
-SQL> execute update note;
-BEGIN update note; END;
-
-                 *
-ERROR at line 1:
-ORA-06550: line 1, column 18: 
-PL/SQL: ORA-00971: missing SET keyword 
-ORA-06550: line 1, column 7: 
-PL/SQL: SQL Statement ignored 
-
-
-SQL> execute update_note;
-BEGIN update_note; END;
-
-      *
-ERROR at line 1:
-ORA-06550: line 1, column 7: 
-PLS-00201: identifier 'UPDATE_NOTE' must be declared 
-ORA-06550: line 1, column 7: 
-PL/SQL: Statement ignored 
-
-
-SQL> execute note_update;
-mise a jour des notes                                                           
-mise a jour des notes                                                           
-mise a jour des notes                                                           
-
-PL/SQL procedure successfully completed.
 
 SQL> 

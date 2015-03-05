@@ -106,8 +106,7 @@ CREATE OR REPLACE PROCEDURE note_update as
 	
 	ligne curs_moy %rowtype;
 	
-BEGIN 	
-	
+BEGIN 		
 	for ligne in curs_moy loop
 		requete := 'UPDATE Livres set note_moy = :'||ligne.note_moy||' where refl = :'|| ligne.refer;
 		dbms_output.put_line(' mise a jour des notes ');
@@ -116,15 +115,23 @@ BEGIN
 END note_update;
 /
 
+
 CREATE OR REPLACE TRIGGER livre_aft_ins_row_upd
 	AFTER INSERT OR UPDATE
 	ON Avis
 	FOR EACH ROW
 	DECLARE
+	NEW_NOTE_MOYENNE number (3,2)
 	BEGIN
-		execute immediate ('execute note_update');
+	SELECT OLD(AVG(note),0) INTO NEW_NOTE_MOYENNE FROM Avis WHERE refl =: new.refl;
+	UPDATE Livres SET note_moy = NEW_NOTE_MOYENNE WHERE refl =: new.refl;
 END;		
 /
-	
+
+--Fonctionne pas et c'est normal on a un probleme de table mutante, quand on met a jour la moyenne on modifie la moyenne qu'on calcule. 
+
+       	    
+
+
 
 
