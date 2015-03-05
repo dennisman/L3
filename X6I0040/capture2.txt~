@@ -1,0 +1,894 @@
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    BbnInter_94:c2:89     Broadcast             ARP      Who has 192.168.1.2?  Tell 192.168.1.1
+
+Frame 1 (42 bytes on wire, 42 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.134852000
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 42 bytes
+    Capture Length: 42 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:arp]
+    [Coloring Rule Name: ARP]
+    [Coloring Rule String: arp]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+        Address: Broadcast (ff:ff:ff:ff:ff:ff)
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+    Hardware type: Ethernet (0x0001)
+    Protocol type: IP (0x0800)
+    Hardware size: 6
+    Protocol size: 4
+    Opcode: request (0x0001)
+    Sender MAC address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Sender IP address: 192.168.1.1 (192.168.1.1)
+    Target MAC address: 00:00:00_00:00:00 (00:00:00:00:00:00)
+    Target IP address: 192.168.1.2 (192.168.1.2)
+
+No.     Time        Source                Destination           Protocol Info
+      2 0.000836    BbnInter_aa:91:b5     BbnInter_94:c2:89     ARP      192.168.1.2 is at 02:04:06:aa:91:b5
+
+Frame 2 (42 bytes on wire, 42 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.135688000
+    [Time delta from previous captured frame: 0.000836000 seconds]
+    [Time delta from previous displayed frame: 0.000836000 seconds]
+    [Time since reference or first frame: 0.000836000 seconds]
+    Frame Number: 2
+    Frame Length: 42 bytes
+    Capture Length: 42 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:arp]
+    [Coloring Rule Name: ARP]
+    [Coloring Rule String: arp]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: ARP (0x0806)
+Address Resolution Protocol (reply)
+    Hardware type: Ethernet (0x0001)
+    Protocol type: IP (0x0800)
+    Hardware size: 6
+    Protocol size: 4
+    Opcode: reply (0x0002)
+    Sender MAC address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Sender IP address: 192.168.1.2 (192.168.1.2)
+    Target MAC address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Target IP address: 192.168.1.1 (192.168.1.1)
+
+No.     Time        Source                Destination           Protocol Info
+      3 0.000873    192.168.1.1           192.168.1.2           TCP      nei-management > http [SYN] Seq=0 Win=5840 Len=0 MSS=1460 TSV=157934 TSER=0 WS=1
+
+Frame 3 (74 bytes on wire, 74 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.135725000
+    [Time delta from previous captured frame: 0.000037000 seconds]
+    [Time delta from previous displayed frame: 0.000037000 seconds]
+    [Time since reference or first frame: 0.000873000 seconds]
+    Frame Number: 3
+    Frame Length: 74 bytes
+    Capture Length: 74 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 60
+    Identification: 0x2b8b (11147)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8bdd [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 0, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 40 bytes
+    Flags: 0x02 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0x5acc [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (20 bytes)
+        Maximum segment size: 1460 bytes
+        SACK permitted
+        Timestamps: TSval 157934, TSecr 0
+        NOP
+        Window scale: 1 (multiply by 2)
+
+No.     Time        Source                Destination           Protocol Info
+      4 0.001936    192.168.1.2           192.168.1.1           TCP      http > nei-management [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 TSV=157838 TSER=157934 WS=1
+
+Frame 4 (74 bytes on wire, 74 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.136788000
+    [Time delta from previous captured frame: 0.001063000 seconds]
+    [Time delta from previous displayed frame: 0.001063000 seconds]
+    [Time since reference or first frame: 0.001936000 seconds]
+    Frame Number: 4
+    Frame Length: 74 bytes
+    Capture Length: 74 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 60
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0xb768 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 40 bytes
+    Flags: 0x12 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5792
+    Checksum: 0x5a98 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (20 bytes)
+        Maximum segment size: 1460 bytes
+        SACK permitted
+        Timestamps: TSval 157838, TSecr 157934
+        NOP
+        Window scale: 1 (multiply by 2)
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 3]
+        [The RTT to ACK the segment was: 0.001063000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+      5 0.002020    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=1 Ack=1 Win=5840 Len=0 TSV=157936 TSER=157838
+
+Frame 5 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.136872000
+    [Time delta from previous captured frame: 0.000084000 seconds]
+    [Time delta from previous displayed frame: 0.000084000 seconds]
+    [Time since reference or first frame: 0.002020000 seconds]
+    Frame Number: 5
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x2b8c (11148)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8be4 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 5840 (scaled)
+    Checksum: 0x9494 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157936, TSecr 157838
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 4]
+        [The RTT to ACK the segment was: 0.000084000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+      6 0.027832    192.168.1.1           192.168.1.2           HTTP     GET / HTTP/1.0
+
+Frame 6 (281 bytes on wire, 281 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.162684000
+    [Time delta from previous captured frame: 0.025812000 seconds]
+    [Time delta from previous displayed frame: 0.025812000 seconds]
+    [Time since reference or first frame: 0.027832000 seconds]
+    Frame Number: 6
+    Frame Length: 281 bytes
+    Capture Length: 281 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 267
+    Identification: 0x2b8d (11149)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8b0c [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 1, Ack: 1, Len: 215
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 216    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 5840 (scaled)
+    Checksum: 0x4e70 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157939, TSecr 157838
+Hypertext Transfer Protocol
+    GET / HTTP/1.0\r\n
+        Request Method: GET
+        Request URI: /
+        Request Version: HTTP/1.0
+    Host: 192.168.1.2\r\n
+    Accept: text/html, text/plain, text/css, text/sgml, */*;q=0.01\r\n
+    Accept-Encoding: gzip\r\n
+    Accept-Language: en\r\n
+    User-Agent: Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/1.6.2\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+      7 0.029367    192.168.1.2           192.168.1.1           TCP      http > nei-management [ACK] Seq=1 Ack=216 Win=6864 Len=0 TSV=157840 TSER=157939
+
+Frame 7 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.164219000
+    [Time delta from previous captured frame: 0.001535000 seconds]
+    [Time delta from previous displayed frame: 0.001535000 seconds]
+    [Time since reference or first frame: 0.029367000 seconds]
+    Frame Number: 7
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x68db (26843)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4e95 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 1, Ack: 216, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6864 (scaled)
+    Checksum: 0x91b8 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157840, TSecr 157939
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 6]
+        [The RTT to ACK the segment was: 0.001535000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+      8 0.051207    192.168.1.2           192.168.1.1           HTTP     HTTP/1.1 200 OK (text/html)
+
+Frame 8 (362 bytes on wire, 362 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.186059000
+    [Time delta from previous captured frame: 0.021840000 seconds]
+    [Time delta from previous displayed frame: 0.021840000 seconds]
+    [Time since reference or first frame: 0.051207000 seconds]
+    Frame Number: 8
+    Frame Length: 362 bytes
+    Capture Length: 362 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp:http:data-text-lines]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 348
+    Identification: 0x68dc (26844)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4d6c [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 1, Ack: 216, Len: 296
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 297    (relative sequence number)]
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6864 (scaled)
+    Checksum: 0x756c [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157840, TSecr 157939
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+        Request Version: HTTP/1.1
+        Response Code: 200
+    Date: Mon, 23 Feb 2015 17:16:40 GMT\r\n
+    Server: Apache/2.2.8 (Debian)\r\n
+    Last-Modified: Thu, 14 Feb 2008 19:05:55 GMT\r\n
+    ETag: "23f27-2d-44622faa82ac0"\r\n
+    Accept-Ranges: bytes\r\n
+    Content-Length: 45
+    Connection: close\r\n
+    Content-Type: text/html\r\n
+    \r\n
+Line-based text data: text/html
+    <html><body><h1>It works!</h1></body></html>\n
+
+No.     Time        Source                Destination           Protocol Info
+      9 0.051239    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=216 Ack=297 Win=6912 Len=0 TSV=157939 TSER=157840
+
+Frame 9 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.186091000
+    [Time delta from previous captured frame: 0.000032000 seconds]
+    [Time delta from previous displayed frame: 0.000032000 seconds]
+    [Time since reference or first frame: 0.051239000 seconds]
+    Frame Number: 9
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x2b8e (11150)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8be2 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 297, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 297    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6912 (scaled)
+    Checksum: 0x9078 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157939, TSecr 157840
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 8]
+        [The RTT to ACK the segment was: 0.000032000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+     10 0.051909    192.168.1.2           192.168.1.1           TCP      http > nei-management [FIN, ACK] Seq=297 Ack=216 Win=6864 Len=0 TSV=157840 TSER=157939
+
+Frame 10 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.186761000
+    [Time delta from previous captured frame: 0.000670000 seconds]
+    [Time delta from previous displayed frame: 0.000670000 seconds]
+    [Time since reference or first frame: 0.051909000 seconds]
+    Frame Number: 10
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x68dd (26845)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4e93 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 297, Ack: 216, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 297    (relative sequence number)
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x11 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6864 (scaled)
+    Checksum: 0x908f [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157840, TSecr 157939
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 9]
+        [The RTT to ACK the segment was: 0.000670000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+     11 0.132683    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=216 Ack=298 Win=6912 Len=0 TSV=157945 TSER=157840
+
+Frame 11 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.267535000
+    [Time delta from previous captured frame: 0.080774000 seconds]
+    [Time delta from previous displayed frame: 0.080774000 seconds]
+    [Time since reference or first frame: 0.132683000 seconds]
+    Frame Number: 11
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x2b8f (11151)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8be1 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 298, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 298    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6912 (scaled)
+    Checksum: 0x9071 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157945, TSecr 157840
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 10]
+        [The RTT to ACK the segment was: 0.080774000 seconds]
+
+No.     Time        Source                Destination           Protocol Info
+     12 0.248636    192.168.1.1           192.168.1.2           TCP      nei-management > http [FIN, ACK] Seq=216 Ack=298 Win=6912 Len=0 TSV=157961 TSER=157840
+
+Frame 12 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.383488000
+    [Time delta from previous captured frame: 0.115953000 seconds]
+    [Time delta from previous displayed frame: 0.115953000 seconds]
+    [Time since reference or first frame: 0.248636000 seconds]
+    Frame Number: 12
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+    Destination: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x2b90 (11152)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x8be0 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.1 (192.168.1.1)
+    Destination: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 298, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 298    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x11 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6912 (scaled)
+    Checksum: 0x9060 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157961, TSecr 157840
+
+No.     Time        Source                Destination           Protocol Info
+     13 0.249524    192.168.1.2           192.168.1.1           TCP      http > nei-management [ACK] Seq=298 Ack=217 Win=6864 Len=0 TSV=157863 TSER=157961
+
+Frame 13 (66 bytes on wire, 66 bytes captured)
+    Arrival Time: Feb 23, 2015 18:16:40.384376000
+    [Time delta from previous captured frame: 0.000888000 seconds]
+    [Time delta from previous displayed frame: 0.000888000 seconds]
+    [Time since reference or first frame: 0.249524000 seconds]
+    Frame Number: 13
+    Frame Length: 66 bytes
+    Capture Length: 66 bytes
+    [Frame is marked: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+    Destination: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        Address: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        Address: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x68de (26846)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4e92 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 298, Ack: 217, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 298    (relative sequence number)
+    Acknowledgement number: 217    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6864 (scaled)
+    Checksum: 0x9061 [correct]
+        [Good Checksum: True]
+        [Bad Checksum: False]
+    Options: (12 bytes)
+        NOP
+        NOP
+        Timestamps: TSval 157863, TSecr 157961
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 12]
+        [The RTT to ACK the segment was: 0.000888000 seconds]
+

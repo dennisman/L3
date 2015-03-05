@@ -1,0 +1,188 @@
+No.     Time        Source                Destination           Protocol Info
+      3 0.000873    192.168.1.1           192.168.1.2           TCP      nei-management > http [SYN] Seq=0 Win=5840 Len=0 MSS=1460 TSV=157934 TSER=0 WS=1
+
+Frame 3 (74 bytes on wire, 74 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 0, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 40 bytes
+    Flags: 0x02 (SYN)
+    Window size: 5840
+    Checksum: 0x5acc [correct]
+    Options: (20 bytes)
+No.     Time        Source                Destination           Protocol Info
+      4 0.001936    192.168.1.2           192.168.1.1           TCP      http > nei-management [SYN, ACK] Seq=0 Ack=1 Win=5792 Len=0 MSS=1460 TSV=157838 TSER=157934 WS=1
+
+Frame 4 (74 bytes on wire, 74 bytes captured)
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 40 bytes
+    Flags: 0x12 (SYN, ACK)
+    Window size: 5792
+    Checksum: 0x5a98 [correct]
+    Options: (20 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+      5 0.002020    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=1 Ack=1 Win=5840 Len=0 TSV=157936 TSER=157838
+
+Frame 5 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 5840 (scaled)
+    Checksum: 0x9494 [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+      6 0.027832    192.168.1.1           192.168.1.2           HTTP     GET / HTTP/1.0
+
+Frame 6 (281 bytes on wire, 281 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 1, Ack: 1, Len: 215
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 216    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 5840 (scaled)
+    Checksum: 0x4e70 [correct]
+    Options: (12 bytes)
+Hypertext Transfer Protocol
+No.     Time        Source                Destination           Protocol Info
+      7 0.029367    192.168.1.2           192.168.1.1           TCP      http > nei-management [ACK] Seq=1 Ack=216 Win=6864 Len=0 TSV=157840 TSER=157939
+
+Frame 7 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 1, Ack: 216, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6864 (scaled)
+    Checksum: 0x91b8 [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+      8 0.051207    192.168.1.2           192.168.1.1           HTTP     HTTP/1.1 200 OK (text/html)
+
+Frame 8 (362 bytes on wire, 362 bytes captured)
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 1, Ack: 216, Len: 296
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 297    (relative sequence number)]
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x18 (PSH, ACK)
+    Window size: 6864 (scaled)
+    Checksum: 0x756c [correct]
+    Options: (12 bytes)
+Hypertext Transfer Protocol
+Line-based text data: text/html
+No.     Time        Source                Destination           Protocol Info
+      9 0.051239    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=216 Ack=297 Win=6912 Len=0 TSV=157939 TSER=157840
+
+Frame 9 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 297, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 297    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x9078 [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+     10 0.051909    192.168.1.2           192.168.1.1           TCP      http > nei-management [FIN, ACK] Seq=297 Ack=216 Win=6864 Len=0 TSV=157840 TSER=157939
+
+Frame 10 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 297, Ack: 216, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 297    (relative sequence number)
+    Acknowledgement number: 216    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x11 (FIN, ACK)
+    Window size: 6864 (scaled)
+    Checksum: 0x908f [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+     11 0.132683    192.168.1.1           192.168.1.2           TCP      nei-management > http [ACK] Seq=216 Ack=298 Win=6912 Len=0 TSV=157945 TSER=157840
+
+Frame 11 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 298, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 298    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x9071 [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+No.     Time        Source                Destination           Protocol Info
+     12 0.248636    192.168.1.1           192.168.1.2           TCP      nei-management > http [FIN, ACK] Seq=216 Ack=298 Win=6912 Len=0 TSV=157961 TSER=157840
+
+Frame 12 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_94:c2:89 (02:04:06:94:c2:89), Dst: BbnInter_aa:91:b5 (02:04:06:aa:91:b5)
+Internet Protocol, Src: 192.168.1.1 (192.168.1.1), Dst: 192.168.1.2 (192.168.1.2)
+Transmission Control Protocol, Src Port: nei-management (3886), Dst Port: http (80), Seq: 216, Ack: 298, Len: 0
+    Source port: nei-management (3886)
+    Destination port: http (80)
+    Sequence number: 216    (relative sequence number)
+    Acknowledgement number: 298    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x11 (FIN, ACK)
+    Window size: 6912 (scaled)
+    Checksum: 0x9060 [correct]
+    Options: (12 bytes)
+No.     Time        Source                Destination           Protocol Info
+     13 0.249524    192.168.1.2           192.168.1.1           TCP      http > nei-management [ACK] Seq=298 Ack=217 Win=6864 Len=0 TSV=157863 TSER=157961
+
+Frame 13 (66 bytes on wire, 66 bytes captured)
+Ethernet II, Src: BbnInter_aa:91:b5 (02:04:06:aa:91:b5), Dst: BbnInter_94:c2:89 (02:04:06:94:c2:89)
+Internet Protocol, Src: 192.168.1.2 (192.168.1.2), Dst: 192.168.1.1 (192.168.1.1)
+Transmission Control Protocol, Src Port: http (80), Dst Port: nei-management (3886), Seq: 298, Ack: 217, Len: 0
+    Source port: http (80)
+    Destination port: nei-management (3886)
+    Sequence number: 298    (relative sequence number)
+    Acknowledgement number: 217    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x10 (ACK)
+    Window size: 6864 (scaled)
+    Checksum: 0x9061 [correct]
+    Options: (12 bytes)
+    [SEQ/ACK analysis]
+
