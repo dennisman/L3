@@ -1,0 +1,227 @@
+
+
+============================================================================
+GROUPE 601A; 609G
+============================================================================
+
+
+NOTE 2/3
+Béziers la Fosse Thibault 	
+Merlet Corentin 
+Bordet Dennis
+Pokemons
+
+- Il faut justifier le texte (aligner à droite)
+- Nombreuses fautes. Faites attention à l’orthographe, e.g., nombreuses manipulation, les démarches que nous avons effectués (il manque l'accord féminin), les zones dans lesquels (lesquels doit être au féminin), les informations ainsi obtenus (encore l’accord), à peu prêt, etc.
+- La section I devrait donner la description de l’organisation de tout le document.
+- Le titre de la section II ne dit rien sur le contenu de la section, mettez qqch comme  « Les choix sur la base de données ». En plus vous pouvez fusionner la section II et la section III.
+- Si capturable est FAUX alors Zone doit être null ? Ceci peut être assuré par un trigger au moment de l’insertion.
+- D’après votre instance de table, on peut déduire les DFs: taille->poids, type1->type2
+Il faut vous assurer que vous ne passez pas à coté de certaines DFs.
+- Dans la section Clés, il faut mieux expliquer pour quoi {nom, zone} et {num, zone} sont des clés, i.e., car leur fermeture détermine l’ensemble des attributs et car pas de sous-ensemble qui détermine l’ensemble d’atts.
+- Dans les sections sur les algorithmes de décomposition, rappeler brièvement l’objectif de ces algorithmes. Il faut donner aussi une description rapide de chaque algorithme avant de le développer pour votre BD.
+- Vos exemples de requêtes manquent d’insertions ou des mises à jour. Vous pouvez penser à des triggers et des procedures stockées qui pourront « automatiser » une partie de ces manipulations. Peut être pour votre exemple particulière uniquement les insertions sont pertinentes ?
+
+
+NOTE 2.5/3
+Eflamm Ollivier			
+Guillaume Dugrenot
+Plateforme de jeux vidéo en ligne
+
+- J’apprécié l’introduction avec la description de l’organisation du document. Vous pouvez être plus précis en donnant les numéros de section dans la description de l’organisation.
+- Dans vos DF, est-il possible que date_achat->prix ? ou deux joueur peuvent acheter le même jeu, le même jour à un prix différent ?
+- Concernant note_presse, pour avoir plusieurs notes de presse pour un même jeu vous pouvez ajouter la DF suivante : évaluateur, titre, éditeur->note_presse. Et supprimer note_presse de la DF (2).
+- L’instance de votre BD doit vous aider à dégager les DF, elle doit aller donc dans la section 2 avant la liste de DF (ou après, pour vérifier les DF si vous préférez).
+- Très bien votre graphe de DF, par contre, là vous pouvez toute de suite déterminer la clé de votre ensemble de DF.
+- La section 3, devrait aller dans l’introduction, avant la description de l’organisation du document (ou après).
+- Dans votre instance, on voit très peu la redondance car vous n’avez pas répété le login (un même joueur qui achète plusieurs jeux). 
+- Je n’ai pas compris le sense de ce qui est en vert et bleu, vérifiez svp.
+- Pour l’algorithme par décomposition :
+ a) il n’est pas nécessaire la couverture minimale,
+ b) il faut dire comment vous choisissez les DF qui sont à l’origine des relations de l’arbre (ie., les DF qui violent le principe de BCNF qui est C->NC, C->PC),
+ c) chaque relation feuille doit avoir son ensemble de DF correspondant, autrement on ne peux pas voir si spdf,
+ d) la propriété spi n’est pas évidente à remarquer si on connait pas, vous pouvez dire clairement pourquoi vous êtes sur que l’algo par décomposition donne des relations qui assurent la propriété spi.
+Corrigez cela svp.
+- L’algo de Bernstein demande une couverture minimale cf. voir cours. Vous avez une confusion entre fermeture et coverture minimale…
+- corriger : aucunes (doit être sans s, page 10)
+- Vous n’avez pas bien expliqué l’alto de Bernstein (voir cours). Corrigez svp.
+
+
+NOTE 1.5/3
+GRALL Arnaud		
+GOUPIL Félix
+NOEL Shirley
+Courses à domicile
+
+- Le sommaire doit avoir un numéro de section en plus du nom et du numéro de page. Avec numéro de section j’aurais plus simplement fait mes commentaires...
+- Corrigez les fautes d’orthographe, clients de confiances (sans s), avec ses informations. nom, prénom, etc (sans point), un entrepôt où sont stocké (avec s), encore en stocke (sans e), etc. etc. etc. Relisez et corrigez tous les trois le rapport...
+- Dans la section 3 (schéma) on ne comprend pas les attributs id_co, date_co, qte_co,qte_act,qte_max, seuil. Il faut expliquer.
+Il faut aussi donner plus d’instances pour motiver les DF mais aussi pour exprimer les problèmes de redondances.
+- Dans la section 4 on comprend les attributs mais il faut les comprendre dès la section 3.
+- Dans la section 5, il faut bien argumenter pour quoi {id_prod, id_co} est clé, et pourquoi CV(DF)=DF.
+- Il faut aussi rappeler les algorithmes et les développer pas à pas.
+
+
+
+
+NOTE 1/3
+Quentin LE CORVEC	 
+Gestion d’un Zoo
+
+- Le sommaire doit avoir un numéro de section en plus du nom et du numéro de page. Avec numéro de section j’aurais plus simplement fait mes commentaires...
+- Il manque la section avec les décompositions.
+- Corrigez les fautes d’orthographe : permetra, les information suivante, affecter à l’employé, Tables final, etc. etc.
+- Numérotez les DF, il faut les argumenter aussi (prenez l’instance pour argumenter)
+- Faites le graphe des dépendances
+- Argumentez/développez comment avez-vous trouvé la clé
+- Expliquez l’algorithme par décomposition et développez pas à pas avec l’arbre de décomposition
+- Expliquez et développez l’algo de Bernstein et comparez le schéma resultant avec celui de l’algo par décomposition.
+
+
+
+NOTE 2/3
+Marie GIRAUD			
+Antoine LEBOEUFRomain GOULETTE
+Gestion d’une station de ski
+
+- Bonne introduction
+- Dans les attributs 
+ a) je n’ai pas compris nbMoniteur (nombre de moniteurs d’une station ?). Il faut spécifier tous les attributs avant de les voir apparaître dans la table d’instances.
+ b) les cours sont sur quelles dates ?
+- Argumentez pourquoi  {idCours, idPiste} est la clé. Le schéma aide à la déterminer mais il faut expliquer plus à l’aide de la fermeture et de l’ensemble minimal.
+- Il faut rappeler les algos et les développer pas à pas. Vous n’avez pas tout compris d’après votre rapport. Lissez les polycopiés et la section de lecture obligatoire concernant ces thèmes puis corrigez votre rapport.
+- J’ai apprécié la vérification avec les résultat du site web. 
+
+
+
+NOTE 3/3
+LIMAMI Anas		LOPEZ Maxime  
+Gestion des réservations de places de cinéma
+
+- Le rapport est à rendre en pdf !
+- En générale j’ai bcp apprécié tous les détails, descriptions et explications. Ca montre que vous avez bien compris le sujet.
+- J’ai également apprécie votre bonne rédaction.
+- A votre table de matières ajoutez des numéros de section. Ca facilite les commentaires.
+- J’ai apprécié le tableau avec les attributs, leur description et leur type.
+- Dans votre instance de BD, il faut mettre en évidence la redondance du fait de 
+  a) plusieurs réservations sur un même film 
+  b) un même film projeté sur plusieurs salles. 
+- J’ai apprécié la description des anomalies.
+- Corriger : abonnépeut, norte  
+- On doit pouvoir dégager plus de DF, ie., 
+  a) idSalle,dateResa,heureResa ->idFilm; 
+  b) idAbonne,dateResa,heureResa -> idFilm
+etc.
+Il ne faut pas se limiter au minimum évident.
+- Dans la description de 3FN, vous proposez déjà des décomposition intuitives (mais certes correctes dans votre cas). L’idée des algorithmes de décomposition est précisément de donner un cadre plus formel pour la décomposition. Je vous propose de ne pas inclure votre décomposition intuitive.
+- Dans l’algo de Bernstein, à l’introduction, vous pouvez rappeler l’algo avec un peu plus de détail.
+- Dans l’algo de decomposition, dire quel est le principe de BC, ie. à gauche une clé.
+- R221 n’a pas de DF ?
+
+
+
+NOTE 0.5/3
+Ugo MAHEY 		
+Florian Delavernhe
+Cadeaux non voulus et à échanger, offrir ou vendre
+
+- Corriger votre table de matières, elle doit contenir, en plus les numéros de page des sections. Soyez plus explicit dans le choix des noms des sections. Grosse table et DF ne sont pas des titres adéquats.
+- Aligner aussi sur la droite votre texte.
+- Expliquez et argumentez plus chaque section et étape de votre travail !
+- Argumentez et expliquez les choix des attributs
+- Numérotez vos DF
+- Vérifiez vos DF, pourquoi dans la DF 2 il y a 2 fois id Demande à gauche ?  
+- Expliquez les algorithms, leur objectif, leur garanties, et les pas à suivre. Développez plus.
+- Les tables feuilles issues de l’algo de décomposition doivent avoir une(s) DF
+- Votre rapport ne me permet pas de constater que vous avez compris.
+
+
+
+NOTE 2/3
+Théo Delalande-Delarbre		
+Thomas Minier
+Benjamin Sientzoff
+Base de données de la rédaction d’un journal
+
+- J’apprécie la rédaction en latex de votre rapport.
+- J’apprécie également l’introduction avec une description des parties du rapport.
+- Très bien le tableau 1 (Figure) avec le découpage des tâches et le planning.
+- Corrigez : « une une » dans section 1.2, LA, d’es articles, entre ceux-ci (?), Figure 2.1 n’existe pas, nous avons donc les décomposer (?), On construis, avoir appliquer 
+- Vous devez détailler chaque pas de votre travail, par exemple, quelles sont les conditions pour déterminer une clé, comment calculer la couverture minimale (ie., les pas à suivre, cf le cours)
+- Pas mal pour le développement de l’algo de Bernstein. Mais démontrez pourquoi spi, pdf, et 3FN.
+- l’algo par décomposition n’est pas clair, donnez les détails et l’arbre de décomposition avec à chaque branche quelle DF a été utilisée.
+
+
+NOTE 2/3
+MOREAU Benjamin			LEGRU GuillaumeKAUFFEISEN Sylvain
+Bibliothèque de skins
+
+- J’apprécie l’introduction
+- Dans votre BD, je ne comprends pas pourquoi il n’y a pas de lien entre un joueur et son (ses ?) skin ou personnages ?
+- L’instance a l’air ok
+- Il faut détailler comment la clé est déterminée.
+- Dans Algo de Bernstein il faut développer pas à pas la couverture minimale et expliquer.
+- Démontrez les caractéristiques spi, spdf, et 3FN des tables issues de Bernstein.
+- Dans l’algo par décomposition il faut aussi détailler, comment vous choisissez les DF qui déterminent les branches ? Vous partez de l’ensemble des DF du départ ou à partir de la couverture minimale ? Démontrez également les propriétés du schéma obtenu.
+- J’apprécie la conclusion, vous avez tout pour démontrer spi à l’aide des relations décomposées.
+
+
+
+
+NOTE 1.5/3
+Jordan SAVARY 		
+Laetitia N’DINDIN 
+Arthur ROSSIGNOL
+M ́ethodes informatiques appliqu ́ees `a la gestion des entreprises
+
+- j’apprécie le rapport en latex
+- il manque le nom de votre projet
+- dans 2.1, montrez les anomalies du schéma de départ
+- corrigez : IEliminer
+- Il faut détailler comment la clé est déterminée.
+- j’apprécie le détail des étapes du calcul de CV(DF)
+- Dans le partitionement, il y a peut être une erreur, R1 doit avoir les DF 1 et 2 ?
+- Dans l’algo par décomposition il faut détailler pas à pas, notamment, comment vous déterminez les branches de l’arbre ?
+- Demontrez pour les 2 decompositions les propriétés spi, spdf, 3FN et BCNF.
+- Il faut donner toutes les explications de telle sorte que ca soit clair que vous avez tout compris.
+- j’apprécie votre diagramme, cela permet de voir les liens entre les tables.
+- Le diagramme de la fin contient 3 tables, or vos décompositions donnent 4 tables !!!
+Corrigez.
+- la section 2.5 peut vous permettre de démontrer spi...
+
+NOTE 2/3
+Nicolas Guittonneau,		
+Arthur Ouisse,
+Charlène Servantie
+Recensement de Jeux entre copains
+
+- Donner un nom à votre projet 
+- Votre texte est facile à lire mais avec des phrases familières et le récit fait très chronologique. Pour le rendre plus professionnel essayez d’être plus factuel, de sorte à rendre le rapport plus intemporel.
+- Pour rendre plus facile à lire les attributs et leur description, vous pouvez faire un tableau.
+- Dans les DF, pas besoin de souligner les attributs à gauche. Il faut les numéroter depuis le début.
+- Dans chaque partie de votre travail, rappeler les concepts utilisés, expliquez, décrivez le plus possible.
+- Dans le développement des algorithms rappelez leur principles, l’algorithme en lui même et prouvez les garanties des algorithmes sur votre schéma résultat (ie., spi,spdf, 3FN, BCNF),
+- Vous n’appliquez pas correctement l’algorithm de Bernstein, ce que vous avez fait est erroné
+- j’apprécie la vérification faite avec le site web ainsi que le diagramme de votre schéma.
+
+
+============================================================================
+GROUPE 601A; 609G
+============================================================================
+
+
+NOTE 2/3
+Léo Cassiau, 
+Corentin Ovyn, 
+Ekaterina Le Diouron
+
+- Donner un nom à votre projet
+- J’apprécie 
+  * l’introduction
+  * la présentation de la table de départ
+- Corriger: créés (page 6), Berstain (c’est Bernstein),
+- Dans le calcule des Clés, il faut expliquer pour quoi et comment vous êtes arrivé à l’ensemble(s) trouvé(s), i.e., car leur fermeture détermine l’ensemble des attributs et car pas de sous-ensemble qui détermine l’ensemble d’attributs.
+- Dans le développement des algorithms rappelez leur principles, l’algorithme en lui même et prouvez les garanties des algorithmes sur votre schéma résultat (ie., spi,spdf, 3FN, BCNF). Actuellement ca fait très factuel, on ne sait pas le pourquoi de chaque étape. En tout cas à la lecture je ne peux pas savoir si vous avez compris cela.
+- Pas facile de lire le tableau sur la décomposition, faite plutôt une figure avec l’arbre plus évident.
+- J’apprécie la vérification sur le site web.
+
