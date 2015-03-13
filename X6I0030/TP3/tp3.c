@@ -2,7 +2,10 @@
 /* Il s'agit de l'exercice 2.2 des feuilles de TD, qui a servi à illustrer l'utilisation d'une matrice creuse avec GNUMathProg */
 /* Ici, toutes les données sont saisies "en dur" dans le code, et nous nous permettons donc des allocations statiques. 
    En cas de lecture des données dans un fichier, des allocations dynamiques seraient nécessaires. */
-
+// J'AI UNE ERREUR QUI M'EMBETE
+/*glp_load_matrix: ia[97] = 49; row index out of range
+Error detected in file glpapi01.c at line 996
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,7 +15,7 @@
 
 #define NBVAR N*M+1 //n*m + cmax
 #define NBCONTR N+M //n+m
-#define NBCREUX M+2*(N*M)// 2 *(n*m) + m = 2*(16*3)
+#define NBCREUX (M+2*(N*M))// 2 *(n*m) + m = 2*(16*3) = 99
 
 
 int main(int argc, char *argv[])
@@ -29,9 +32,9 @@ int main(int argc, char *argv[])
 
 	/* variables récupérant les résultats de la résolution du problème (fonction objectif et valeur des variables) */
 
-	int i,j;
-	double z; 
-	double x[NBVAR]; 
+	int i,j,pos;
+	double z;
+	double x[NBVAR];
 	
 	/* Les déclarations suivantes sont optionnelles, leur but est de donner des noms aux variables et aux contraintes.
 	   Cela permet de lire plus facilement le modèle saisi si on en demande un affichage à GLPK, ce qui est souvent utile pour détecter une erreur! */
@@ -75,8 +78,8 @@ for(i = N+1;i <= N+M;i++)
 		sprintf(numero[i-1], "%d", i);
 		strcat(nomcontr[i-1], numero[i-1]); /* Les contraintes sont nommés "chargemax", "chargemax2"... */		
 		glp_set_row_name(prob, i, nomcontr[i-1]); /* Affectation du nom à la contrainte i */
-		
-		glp_set_row_bnds(prob, i, GLP_LO, 0.0, 0.0);
+		// il doit manquer un bout ici
+		glp_set_row_bnds(prob, i, GLP_UP, 0.0, 0.0);
 		//<=0
 		// on met cmax a gauche car c'est une variable
 		// il aura le coeff -1 dans la mat creuse
@@ -96,7 +99,7 @@ for(i = N+1;i <= N+M;i++)
 			glp_set_col_bnds(prob, i, GLP_DB, 0.0, 100.0);
 		}else{
 			/* partie optionnelle : donner un nom aux variables */
-			sprintf(nomvar[i-1],"x%c",i-1);
+			sprintf(nomvar[i-1],"x%d",i-1);
 			glp_set_col_name(prob, i , nomvar[i-1]); /* Les variables sont nommées "xA", "xB"... afin de respecter les noms de variables de l'exercice 2.2 */
 		
 			/* partie obligatoire : bornes éventuelles sur les variables, et type */
@@ -125,15 +128,22 @@ for(i = N+1;i <= N+M;i++)
  ja -> xij -> (i-1)*m+j
 */
 
-int pos = 1;
+	pos = 1;
 	for(i=1; i<=N; i++){
 		for(j=1; j<=M; j++){
-			ia[pos] = i;		ja[pos] = j;				ar[pos] = 1;pos++; 
-			ia[pos] = N+j;	ja[pos] = (i-1)*M+j;	ar[pos] = p[i];pos++;
+			ia[pos] = i;
+			ja[pos] = (i-1)*M+j;		ar[pos] = 1;
+			pos++; 
+			
+			ia[pos] = N+j;
+			ja[pos] = (i-1)*M+j;	ar[pos] = p[i];
+			pos++;
 		}
 	}
-for(i=N*M+1; i<=N*M+M;i++){
-	ia[pos] = N;		ja[pos] = i-2;				ar[pos] = -1;
+	
+for(i=N+1; i<=N+M;i++){
+	ja[pos] = N*M+1;
+	ia[pos] = i;				ar[pos] = -1;
 	pos++; 	
 }
 	
