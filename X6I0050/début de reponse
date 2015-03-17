@@ -1,0 +1,49 @@
+
+    collaborations : 1 212 896
+    dates : 407
+    publications 481 659
+    squads : 479 540
+    supports : 11 243
+    facts : 473 176
+
+Visualisation du plan d'exécution d'une requête
+
+Q1. 
+explain plan for select title
+from publications
+where nb_pages > 20 ;
+select * from table(dbms_xplan.display);
+
+
+On note que les plans des requêtes R2 et R3 comptent autant d'étapes.
+
+Q2. 
+-- Création d'un index sur idcl
+CREATE INDEX index_avis ON avis(idcl);
+-- Explication de la requête : select * from avis where note > 10 ;
+explain plan for select * from avis where note > 10 ;
+select * from table(dbms_xplan.display);
+-- Explication de la requête : select * from avis where round(note,2) > 10 ;
+explain plan for select * from avis where round(note,2) > 10 ;
+select * from table(dbms_xplan.display); 
+
+Les résultats des différentes commandes sont présentes en détail dans le fichier tp5-plans-q2.lst
+
+On remarque que les différentes requêtes ont beaucoup plus d'étapes qu'avant.
+
+Les index
+
+Pour visualiser les indexes d'une table, on utilise la commande suivante : select index_name from user_indexes where table_name = 'nom_table';
+
+Q1. Il n'y a aucun index défini sur les différentes tables de la base. Cela explique que les plans d'exécution des requêtes sur publications1 soient si longs, car Oracle ne trouve pas d'optimisation possible.
+
+Q2.
+
+1 - Les différentes requêtes sont détaillées dans le fichier tp5-index-q2-1.sql
+    Les plans d'éxécution des différentes requêtes se trouvent dans le fichier tp5-index-q2-1.lst
+
+2 - On crée un index sur une clé primaire de la table avis, soit l'attribut idcl
+    Les commandes se trouvent dans le fichier tp5-index-q2-2.sql
+    Les résultats des plans d'exécution après création de l'index se trouve dans le fichier tp5-index-q2-2.lst
+
+

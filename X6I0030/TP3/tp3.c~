@@ -65,20 +65,15 @@ int main(int argc, char *argv[])
 		
 		/* partie indispensable : les bornes sur les contraintes */
 		glp_set_row_bnds(prob, i, GLP_FX, 1.0, 1.0);
-		/* Avec GLPK, on peut définir simultanément deux contraintes, si par exemple, on a pour une contrainte i : "\sum x_i >= 0" et "\sum x_i <= 5",
-		   on écrit alors : glp_set_row_bnds(prob, i, GLP_DB, 0.0, 5.0); la constante GLP_DB signifie qu'il y a deux bornes sur "\sum x_i" qui sont ensuite données.
-		   Ici, nous n'avons qu'une seule contrainte du type "\sum x_i >= 1" (ou "\sum x_i >= 2" pour la contrainte 4) soit une borne inférieure sur "\sum x_i", on écrit donc glp_set_row_bnds(prob, i, GLP_LO, 1.0, 0.0); le paramètre "0.0" est ignoré. 
-		   Les autres constantes sont GLP_UP (borne supérieure sur le membre de gauche de la contrainte) et GLP_FX (contrainte d'égalité).   
-		 Remarque : les membres de gauches des contraintes "\sum x_i ne sont pas encore saisis, les variables n'étant pas encore déclarées dans GLPK */ 
 	}	
-for(i = N+1;i <= N+M;i++)
+for(i = N+1;i <= NBCONTR;i++)
 	{
 	/* partie optionnelle : donner un nom aux contraintes */
-		strcpy(nomcontr[i-1], "chargeMax");
+		strcpy(nomcontr[i-1], "chaMax");
 		sprintf(numero[i-1], "%d", i);
 		strcat(nomcontr[i-1], numero[i-1]); /* Les contraintes sont nommés "chargemax", "chargemax2"... */		
 		glp_set_row_name(prob, i, nomcontr[i-1]); /* Affectation du nom à la contrainte i */
-		
+		// il doit manquer un bout ici
 		glp_set_row_bnds(prob, i, GLP_UP, 0.0, 0.0);
 		//<=0
 		// on met cmax a gauche car c'est une variable
@@ -94,9 +89,9 @@ for(i = N+1;i <= N+M;i++)
 	for(i = 1;i <= NBVAR;i++)
 	{
 		if(i=NBVAR){
-			sprintf(nomvar[i-1],"Cmax");
+			sprintf(nomvar[i-1],"Cm");
 			glp_set_col_name(prob, i , nomvar[i-1]);
-			glp_set_col_bnds(prob, i, GLP_DB, 0.0, 100.0);
+			glp_set_col_bnds(prob, i, GLP_LO, 0.0, 0.0);
 		}else{
 			/* partie optionnelle : donner un nom aux variables */
 			sprintf(nomvar[i-1],"x%d",i-1);
@@ -141,13 +136,14 @@ for(i = N+1;i <= N+M;i++)
 		}
 	}
 	
+//Cmax a -1 !!!
 for(i=N+1; i<=N+M;i++){
-	ja[pos] = N*M+1;
-	ia[pos] = i;				ar[pos] = -1;
+	ia[pos] = i;
+	ja[pos] = N*M+1;				ar[pos] = -1;
 	pos++; 	
 }
 	
-//Cmax a -1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	
 	/* chargement de la matrice dans le problème */
 	
@@ -164,7 +160,7 @@ for(i=N+1; i<=N+M;i++){
 	for(i = 0;i < NBVAR; i++) x[i] = glp_mip_col_val(prob,i+1); /* Récupération de la valeur des variables, Appel différent dans le cas d'un problème en variables continues : for(i = 0;i < p.nbvar;i++) x[i] = glp_get_col_prim(prob,i+1); */
 
 	printf("z = %lf\n",z);
-	for(i = 0;i < NBVAR;i++) printf("x%c = %d, ",'B'+i,(int)(x[i] + 0.5)); /* un cast est ajouté, x[i] pourrait être égal à 0.99999... */ 
+	for(i = 0;i < NBVAR;i++) printf("x%d = %d, ",i,(int)(x[i] + 0.5)); /* un cast est ajouté, x[i] pourrait être égal à 0.99999... */ 
 	puts("");
 
 	/* libération mémoire */
