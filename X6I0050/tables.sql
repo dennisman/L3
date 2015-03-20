@@ -71,7 +71,8 @@ CREATE TABLE Localisations(
 
 
 -- ajout d'un pokemon
--- si il est déja present
+-- si il est déja present, on update, (mieux que de lever une erreur)
+-- sinon, on l'ajoute
 CREATE OR REPLACE PROCEDURE ajouterPokemon(numero IN NUMBER,
 	nm IN Caracteristiques.nom %type,
 	att IN NUMBER,
@@ -98,17 +99,23 @@ BEGIN
 	
     IF (nu > 0)
         THEN
-    	UPDATE  Caracteristiques SET nom=nm, vie=life, attaque=att, where Caracteristiques.num = numero
+        dbms_output.put_line('Le pokemon etait deja Present ... Update');
+    	UPDATE  Caracteristiques SET nom=nm, vie=life, attaque=att, defense=defp,
+    	attSpe=attS, defSpe=defS, vitesse=vit, type1=t1, type2=t2, poids=weight, taille=height, preEvolution=preE, postEvolution=postE,
+    	 arene=arena, apparition=app where Caracteristiques.num = numero	 
     ELSE
-		INSERT INTO Caracteristiques VALUES(numero, nm, life, att, defp, attS, defS, vit, t1, t2, weight, height, preE, postE, arena, app); 
+		INSERT INTO Caracteristiques VALUES(numero, nm, life, att, defp, attS, defS, vit, t1, t2, height, weight, preE, postE, arena, app); 
 	END IF;
 	
 EXCEPTION
-	WHEN deja_present THEN RAISE_APPLICATION_ERROR(-20002, 'Pokemon deja present');
+	--WHEN deja_present THEN RAISE_APPLICATION_ERROR(-20002, 'Pokemon deja present');
 
 END;
 /
 
+-- Procedure d'ajout de technique ( type, capacite)
+-- si deja present, on update,
+-- sinon on insert
 CREATE OR REPLACE PROCEDURE ajoutTech(typ In techniques.type1 %type, capac in techniques.capacite %type)
 IS
 	ty NUMBER;
