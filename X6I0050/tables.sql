@@ -132,6 +132,10 @@ BEGIN
 END;
 /
 
+-- procedure d'ajout de localisation 
+-- si le pokemon entré est deja dans la zone specifiee, on leve une exception
+-- si le pokemon n'est pas dans la base de donnée, un trigger, va l'ajouter par default
+-- sinon on ajoute normalement dans la table Localisations
 CREATE OR REPLACE PROCEDURE ajoutLocal(nu In localisations.num %type, zon in localisations.zone %type, capt in localisations.capturable %type)
 IS
 	deja_dedans INT;
@@ -152,17 +156,20 @@ BEGIN
     	
     	IF (nb_poke = 0)
         	THEN
-    		RAISE pas_de_poke;
+    		--RAISE pas_de_poke;
+    		-- -> on a fait un trigger a la place
     	ELSE
 			Insert into Localisations values (nu, zon, capt);
 		End IF;
 	END IF;
 	
 EXCEPTION
-	WHEN deja_present THEN RAISE_APPLICATION_ERROR(-20004, 'Localisation deja presente');
-	WHEN pas_de_poke THEN RAISE_APPLICATION_ERROR(-20005, 'aucun pokemon n''a été rentré dans la BD avec ce numéro');
+	WHEN deja_present THEN RAISE_APPLICATION_ERROR(-20004, 'le pokemon entré est deja dans cette zone');
+	--WHEN pas_de_poke THEN RAISE_APPLICATION_ERROR(-20005, 'aucun pokemon n''a été rentré dans la BD avec ce numéro');
 END;
 /
+
+
 
 CREATE OR REPLACE PROCEDURE ajoutZone(zon In InfosZones.zone %type, niv in InfosZones.niveau %type)
 IS
