@@ -233,17 +233,24 @@ int main(int argc, char *argv[])
 	
 	/* Optionnel : écriture de la modélisation dans un fichier (utile pour debugger) */
 
-	glp_write_lp(prob,NULL,"musee.lp");
+	glp_write_lp(prob,NULL,"Robots.lp");
 
 	/* Résolution, puis lecture des résultats */
 	
+	//REVOIR CI DESSOUS, CEST FAUX LE TRUC AVEC X[]
 	glp_simplex(prob,NULL);	glp_intopt(prob,NULL); /* Résolution */
 	z = glp_mip_obj_val(prob); /* Récupération de la valeur optimale. Dans le cas d'un problème en variables continues, l'appel est différent : z = glp_get_obj_val(prob);*/
 	x = (double *) malloc (p.nbvilles * sizeof(double));
 	for(i = 0;i < p.nbvilles; i++) x[i] = glp_mip_col_val(prob,i+1); /* Récupération de la valeur des variables, Appel différent dans le cas d'un problème en variables continues : for(i = 0;i < p.nbvilles;i++) x[i] = glp_get_col_prim(prob,i+1);	*/
 
 	printf("z = %lf\n",z);
-	for(i = 0;i < p.nbvilles;i++) printf("x%c = %d, ",'B'+i,(int)(x[i] + 0.5)); /* un cast est ajouté, x[i] pourrait être égal à 0.99999... */ 
+	
+	for(i=1;i<=p.nbvilles;i++)
+	{
+		for(j=1;j<=p.nbvilles;j++){
+			printf("x%d%d = %d, ",i,j,(int)(x[i] + 0.5));
+		}
+	}
 	puts("");
 
 	/* libération mémoire */

@@ -181,8 +181,8 @@ int main(int argc, char *argv[])
 			glp_set_col_name(prob, (i-1)*p.nbvilles+j , nomvar[(i-1)*p.nbvilles+j]); 
 
 			/* partie obligatoire : bornes éventuelles sur les variables, et type */
-			glp_set_col_bnds(prob, (i-1)*p.nbvilles+j-1, GLP_DB, 0.0, 1.0); /* bornes sur les variables, comme sur les contraintes */
-			glp_set_col_kind(prob, (i-1)*p.nbvilles+j-1, GLP_BV);	/* les variables sont par défaut continues, nous précisons ici qu'elles sont binaires avec la constante GLP_BV, on utiliserait GLP_IV pour des variables entières */	
+			glp_set_col_bnds(prob, (i-1)*p.nbvilles+j, GLP_DB, 0.0, 1.0); /* bornes sur les variables, comme sur les contraintes */
+			glp_set_col_kind(prob, (i-1)*p.nbvilles+j, GLP_BV);	/* les variables sont par défaut continues, nous précisons ici qu'elles sont binaires avec la constante GLP_BV, on utiliserait GLP_IV pour des variables entières */	
 		} 
 	}
 	/* définition des coefficients des variables dans la fonction objectif */
@@ -233,7 +233,7 @@ int main(int argc, char *argv[])
 	
 	/* Optionnel : écriture de la modélisation dans un fichier (utile pour debugger) */
 
-	glp_write_lp(prob,NULL,"musee.lp");
+	glp_write_lp(prob,NULL,"Robots.lp");
 
 	/* Résolution, puis lecture des résultats */
 	
@@ -243,7 +243,13 @@ int main(int argc, char *argv[])
 	for(i = 0;i < p.nbvilles; i++) x[i] = glp_mip_col_val(prob,i+1); /* Récupération de la valeur des variables, Appel différent dans le cas d'un problème en variables continues : for(i = 0;i < p.nbvilles;i++) x[i] = glp_get_col_prim(prob,i+1);	*/
 
 	printf("z = %lf\n",z);
-	for(i = 0;i < p.nbvilles;i++) printf("x%c = %d, ",'B'+i,(int)(x[i] + 0.5)); /* un cast est ajouté, x[i] pourrait être égal à 0.99999... */ 
+	
+	for(i=1;i<=p.nbvilles;i++)
+	{
+		for(j=1;j<=p.nbvilles;j++){
+			printf("x%d%d = %d, ",i,j,(int)(x[i] + 0.5));
+		}
+	}
 	puts("");
 
 	/* libération mémoire */
