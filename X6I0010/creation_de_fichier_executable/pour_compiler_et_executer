@@ -1,0 +1,18 @@
+# COMPILATION : CRÉATION D'UN FICHIER DE BYTECODE
+
+ocamlc -o compte_1 chaine_1.ml
+
+# EXÉCUTION DU FICHIER DE BYTECODE (suppose ocmalrun)
+
+./compte_1
+
+ocamlrun compte_1
+
+# COMPILATION : CRÉATION D'UN FICHIER EXÉCUTABLE STANDALONE
+
+ocamlopt -o compte_2 chaine_2.ml
+
+# EXÉCUTION DE CE FICHIER STANDALONE (pas besoin de ocamlrun)
+
+./compte_2
+

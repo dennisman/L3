@@ -1,0 +1,190 @@
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Procedure created.
+
+
+Procedure created.
+
+
+Procedure created.
+
+
+Procedure created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+GRANT INSERT, UPDATE ON Caracteristiques to L3_2
+                                            *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT INSERT, UPDATE ON techniques to L3_2
+                                      *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT INSERT, UPDATE ON InfosZones to L3_2
+                                      *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT INSERT, UPDATE ON Localisations to L3_2
+                                         *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT SELECT ON Caracteristiques to L3_2 WITH GRANT OPTION
+                                    *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT SELECT ON techniques to L3_2 WITH GRANT OPTION
+                              *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT SELECT ON InfosZones to L3_2 WITH GRANT OPTION
+                              *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+GRANT SELECT ON Localisations to L3_2 WITH GRANT OPTION
+                                 *
+ERROR at line 1:
+ORA-01749: you may not GRANT/REVOKE privileges to/from yourself 
+
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Trigger altered.
+
+
+Trigger altered.
+
+
+Trigger altered.
+
+
+Trigger altered.
+
+
+1 row created.
+
+
+1 row created.
+
+Numero de pokemon ajoute aux caracteristiques. Procedez a une mise a jour des   
+valeurs.                                                                        
+Type ajoute a la table technique                                                
+Cette preEvolution est absente de la base de donnees. Vous pourrier ajouter le  
+pokemon numero  par exemple                                                     
+Zone ajoutee a la table InfosZone                                               
+Numero de pokemon ajoute aux caracteristiques. Procedez a une mise a jour des   
+valeurs.                                                                        
+Type ajoute a la table technique                                                
+Cette preEvolution est absente de la base de donnees. Vous pourrier ajouter le  
+pokemon numero  par exemple                                                     
+Zone ajoutee a la table InfosZone                                               
+
+1 row created.
+
+Post evolution incorrecte                                                       
+Cette preEvolution est absente de la base de donnees. Vous pourrier ajouter le  
+pokemon numero 8 par exemple                                                    
+
+1 row created.
+
+Type ajoute a la table technique                                                
+
+1 row created.
+
+
+PL/SQL procedure successfully completed.
+

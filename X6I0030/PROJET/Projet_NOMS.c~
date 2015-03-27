@@ -1,5 +1,7 @@
 /* BORDET Dennis - NOM2 Prénom2 */
 
+//MODELE EXPLICITE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

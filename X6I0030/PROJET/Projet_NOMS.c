@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	double x[NBVAR];
 	
 	prob = glp_create_prob(); /* allocation mémoire pour le problème */ 
-	glp_set_prob_name(prob, "Robot"); /* affectation d'un nom */
+	glp_set_prob_name(prob, "Robots"); /* affectation d'un nom */
 	glp_set_obj_dir(prob, GLP_MIN); /* Il s'agit d'un problème de minimisation */
 
 	glp_smcp parm;
